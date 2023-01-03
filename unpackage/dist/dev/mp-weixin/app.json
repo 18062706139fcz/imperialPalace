@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/find/find",
+    "pages/explore/explore",
+    "pages/admire/admire",
+    "pages/add/add",
+    "pages/mine/mine"
   ],
   "subPackages": [],
   "window": {
@@ -9,6 +13,29 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "探索"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "+"
+      },
+      {
+        "pagePath": "pages/admire/admire",
+        "text": "观赏"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
 }
