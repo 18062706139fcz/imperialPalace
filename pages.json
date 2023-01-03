@@ -52,36 +52,36 @@
 	"uniIdRouter": {},
 	"tabBar": {
 		"backgroundColor": "#fdfbef",
+		"color": "#816b3b",
+		"selectedColor":"#853e38",
 		"list": [{
 				"pagePath": "pages/find/find",
 				"text": "发现",
-				"color": "red"
-				// "iconPath": "/static/drawable/主页off.png",
-				// "selectedIconPath": "/static/drawable/主页on.png"
+				"iconPath": "static/tabbar_img/faxian.png",
+				"selectedIconPath": "static/tabbar_img/faxianjihuo.png"
 			},
 			{
 				"pagePath": "pages/explore/explore",
-				"text": "探索"
-				// "iconPath": "/static/drawable/发现off.png",
-				// "selectedIconPath": "/static/drawable/发现on.png"
+				"text": "探索",
+				"iconPath": "static/tabbar_img/tansuo01.png",
+				"selectedIconPath": "static/tabbar_img/tansuoxuanzhong.png"
 			},
 			{
 				"pagePath": "pages/add/add",
-				"text": "+"
-				// "iconPath": "/static/drawable/发布off.png",
-				// "selectedIconPath": "/static/drawable/发布on.png"
+				"iconPath": "static/tabbar_img/tianjia.png",
+				"selectedIconPath": "static/tabbar_img/tianjia.png"
 			},
 			{
 				"pagePath": "pages/admire/admire",
-				"text": "观赏"
-				// "iconPath": "/static/drawable/消息off.png",
-				// "selectedIconPath": "/static/drawable/消息on.png"
+				"text": "观赏",
+				"iconPath": "static/tabbar_img/guancha-.png",
+				"selectedIconPath": "static/tabbar_img/guancha.png"
 			},
 			{
 				"pagePath": "pages/mine/mine",
-				"text": "我的"
-				// "iconPath": "/static/drawable/我的off.png",
-				// "selectedIconPath": "/static/drawable/我的on.png"
+				"text": "我的",
+				"iconPath": "static/tabbar_img/wode.png",
+				"selectedIconPath": "static/tabbar_img/wode-wode.png"
 			}
 		]
 	}

@@ -15,27 +15,37 @@
   },
   "tabBar": {
     "backgroundColor": "#fdfbef",
+    "color": "#816b3b",
+    "selectedColor": "#853e38",
     "list": [
       {
         "pagePath": "pages/find/find",
         "text": "发现",
-        "color": "red"
+        "iconPath": "static/tabbar_img/faxian.png",
+        "selectedIconPath": "static/tabbar_img/faxianjihuo.png"
       },
       {
         "pagePath": "pages/explore/explore",
-        "text": "探索"
+        "text": "探索",
+        "iconPath": "static/tabbar_img/tansuo01.png",
+        "selectedIconPath": "static/tabbar_img/tansuoxuanzhong.png"
       },
       {
         "pagePath": "pages/add/add",
-        "text": "+"
+        "iconPath": "static/tabbar_img/tianjia.png",
+        "selectedIconPath": "static/tabbar_img/tianjia.png"
       },
       {
         "pagePath": "pages/admire/admire",
-        "text": "观赏"
+        "text": "观赏",
+        "iconPath": "static/tabbar_img/guancha-.png",
+        "selectedIconPath": "static/tabbar_img/guancha.png"
       },
       {
         "pagePath": "pages/mine/mine",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "static/tabbar_img/wode.png",
+        "selectedIconPath": "static/tabbar_img/wode-wode.png"
       }
     ]
   },

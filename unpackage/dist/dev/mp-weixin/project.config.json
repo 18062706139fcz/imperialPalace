@@ -6,7 +6,11 @@
   },
   "setting": {
     "urlCheck": false,
-    "ignoreUploadUnusedFiles": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false,
+    "newFeature": true,
+    "bigPackageSizeSupport": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -14,7 +18,7 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "2.29.0",
+  "libVersion": "2.29.1",
   "appid": "touristappid",
   "projectname": "imperialPalace",
   "condition": {},
