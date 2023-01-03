@@ -51,9 +51,11 @@
 	},
 	"uniIdRouter": {},
 	"tabBar": {
+		"backgroundColor": "#fdfbef",
 		"list": [{
 				"pagePath": "pages/find/find",
-				"text": "发现"
+				"text": "发现",
+				"color": "red"
 				// "iconPath": "/static/drawable/主页off.png",
 				// "selectedIconPath": "/static/drawable/主页on.png"
 			},
