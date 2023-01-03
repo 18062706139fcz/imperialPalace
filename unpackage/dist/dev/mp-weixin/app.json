@@ -14,10 +14,12 @@
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
+    "backgroundColor": "#fdfbef",
     "list": [
       {
         "pagePath": "pages/find/find",
-        "text": "发现"
+        "text": "发现",
+        "color": "red"
       },
       {
         "pagePath": "pages/explore/explore",
