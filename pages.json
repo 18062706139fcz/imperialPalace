@@ -1,17 +1,87 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/find/find",
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/explore/explore",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/admire/admire",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/add/add",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/mine",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+		"list": [{
+				"pagePath": "pages/find/find",
+				"text": "发现"
+				// "iconPath": "/static/drawable/主页off.png",
+				// "selectedIconPath": "/static/drawable/主页on.png"
+			},
+			{
+				"pagePath": "pages/explore/explore",
+				"text": "探索"
+				// "iconPath": "/static/drawable/发现off.png",
+				// "selectedIconPath": "/static/drawable/发现on.png"
+			},
+			{
+				"pagePath": "pages/add/add",
+				"text": "+"
+				// "iconPath": "/static/drawable/发布off.png",
+				// "selectedIconPath": "/static/drawable/发布on.png"
+			},
+			{
+				"pagePath": "pages/admire/admire",
+				"text": "观赏"
+				// "iconPath": "/static/drawable/消息off.png",
+				// "selectedIconPath": "/static/drawable/消息on.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的"
+				// "iconPath": "/static/drawable/我的off.png",
+				// "selectedIconPath": "/static/drawable/我的on.png"
+			}
+		]
+	}
+	
 }
