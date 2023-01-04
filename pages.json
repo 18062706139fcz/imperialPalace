@@ -3,7 +3,10 @@
 		{
 			"path": "pages/find/find",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "发现",
+				"navigationBarTextStyle":"black"
+				// "navigationBarBackgroundColor":"#ffffff"
+				
 			}
 		}
 	    ,{
@@ -44,8 +47,8 @@
         }
     ],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		// "navigationBarTextStyle": "white",
+		// "navigationBarTitleText": "",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
