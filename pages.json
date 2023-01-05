@@ -35,16 +35,18 @@
                 "enablePullDownRefresh": false
             }
             
-        }
-        ,{
-            "path" : "pages/mine/mine",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
+        },
+		{
+		    "path" : "pages/mine/mine",
+		    "style" :                                                                                    
+		    {
+				"navigationBarBackgroundColor":"#c6b089",
+		        "navigationBarTitleText": "我的",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        
     ],
 	"globalStyle": {
 		// "navigationBarTextStyle": "white",

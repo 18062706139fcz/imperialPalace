@@ -30,18 +30,24 @@
 .find_page .find_swiper.data-v-408c90a6 {
   height: auto;
   background-color: #853e38;
-  position: relative;
-}
-.find_page .find_swiper .swiper-box .swiper-item.data-v-408c90a6 {
-  color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -999;
+  width: 100%;
+  height: 170px;
 }
 .find_page .find_swiper .find_swiper_text.data-v-408c90a6 {
   position: absolute;
-  bottom: 25px;
+  bottom: 45px;
   left: 8px;
   color: #ffffff;
+  font-family: ‘Courier New’, Courier, monospace;
 }
 .find_page .find_box.data-v-408c90a6 {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  margin-top: 150px;
   height: auto;
   background-color: #f6f2e6;
   box-sizing: border-box;
@@ -54,8 +60,7 @@
 }
 .find_page .find_box .find_box_herf .find_box_herf_contents.data-v-408c90a6 {
   font-size: 11px;
-  font-weight: 600;
-  padding-right: 16px;
+  padding-right: 14px;
 }
 .find_page .find_box .cultural_guided_tour.data-v-408c90a6 {
   padding-right: 25px;
@@ -63,7 +68,6 @@
 .find_page .find_box .cultural_guided_tour .cultural_guided_tour_text.data-v-408c90a6 {
   display: flex;
   justify-content: space-between;
-  font-weight: 550;
 }
 .find_page .find_box .cultural_guided_tour .cultural_guided_tour_img.data-v-408c90a6 {
   white-space: nowrap;
@@ -74,7 +78,6 @@
 }
 .find_page .find_box .cultural_guided_tour .cultural_guided_tour_img .cultural_guided_tour_img_view .cultural_guided_tour_img_li.data-v-408c90a6 {
   padding-right: 10px;
-  font-weight: 550;
 }
 .find_page .find_box .cultural_collage.data-v-408c90a6 {
   margin-top: 50px;
@@ -83,6 +86,5 @@
 .find_page .find_box .cultural_collage .cultural_collage_text.data-v-408c90a6 {
   display: flex;
   justify-content: space-between;
-  font-weight: 550;
 }
 
