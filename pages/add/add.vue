@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="">
 		
 	</view>
 </template>
@@ -17,6 +17,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
+	
 
 </style>
