@@ -1,13 +1,52 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/find/find",
+    "pages/explore/explore",
+    "pages/admire/admire",
+    "pages/add/add",
+    "pages/mine/mine",
+    "component/card/card"
   ],
   "subPackages": [],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "backgroundColor": "#fdfbef",
+    "color": "#816b3b",
+    "selectedColor": "#853e38",
+    "list": [
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "static/tabbar_img/find_off.png",
+        "selectedIconPath": "static/tabbar_img/find_on.png"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "探索",
+        "iconPath": "static/tabbar_img/explore_off.png",
+        "selectedIconPath": "static/tabbar_img/explore_on.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "iconPath": "static/tabbar_img/useless5.png",
+        "selectedIconPath": "static/tabbar_img/useless5.png"
+      },
+      {
+        "pagePath": "pages/admire/admire",
+        "text": "观赏",
+        "iconPath": "static/tabbar_img/admire_off.png",
+        "selectedIconPath": "static/tabbar_img/admire_on.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/tabbar_img/mine_off.png",
+        "selectedIconPath": "static/tabbar_img/mine_on.png"
+      }
+    ]
   },
   "usingComponents": {}
 }
