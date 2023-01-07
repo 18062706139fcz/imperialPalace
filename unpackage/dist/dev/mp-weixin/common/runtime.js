@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot":1};
+/******/ 		var cssChunks = {"uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot":1,"uni_modules/uni-card/components/uni-card/uni-card":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot":"uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot":"uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot","uni_modules/uni-card/components/uni-card/uni-card":"uni_modules/uni-card/components/uni-card/uni-card"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

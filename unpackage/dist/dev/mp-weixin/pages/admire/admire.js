@@ -147,12 +147,16 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
-//
 var _default =
 {
   data: function data() {
     return {
-      find_box_herf_contents: ["文化地图", "创意小店", "创意手作", "创意IP", "创意待定"] };
+      find_box_herf_contents: [
+      { name: "文化地图", img_src: '../../static/explore_imgs/文化地图.png' },
+      { name: "创意小店", img_src: '../../static/explore_imgs/创意小店.png' },
+      { name: "创意手作", img_src: '../../static/explore_imgs/创意手作.png' },
+      { name: "创意IP", img_src: '../../static/explore_imgs/创意IP.png' },
+      { name: "创意待定", img_src: '../../static/explore_imgs/创意待定.png' }] };
 
   },
   methods: {} };exports.default = _default;

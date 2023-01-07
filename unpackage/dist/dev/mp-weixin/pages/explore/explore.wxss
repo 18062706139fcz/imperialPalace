@@ -29,10 +29,20 @@
 	margin-top: 10px;
 	display: flex;
 	font-size: 11px;
-	padding-top: 30px;
 }
 .common_imgs {
 	width: 20px;
 	height: 20px;
+}
+.find_box_herf_contents {
+	margin-left: 5px;
+	font-size: 11px;
+	padding-right: 14px;
+	align-items: center;
+}
+.control_imgs {
+	width: 45px;
+	height: 45px;
+	margin-left: 10px;
 }
 
