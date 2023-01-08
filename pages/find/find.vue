@@ -14,23 +14,28 @@
 		</view>
 		<view class="find_box">
 			<view class="find_box_herf">
-				<view class="find_box_herf_contents" v-for="(item) in find_box_herf_contents" :key="item">
+				<view class="find_box_herf_contents" v-for="(item) in find_box_herf_contents" :key="item.text">
 					<navigator url="#">
-						<text style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace;margin-left: 10px;"> {{item}}</text>
+						<image :src="item.src" class="find_box_herf_contents_img"></image>
+						<view style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace;">
+							{{item.text}}</view>
 					</navigator>
 				</view>
 			</view>
 			<view class="cultural_guided_tour">
 				<view class="cultural_guided_tour_text">
 					<text style="font-family:‘Courier New’, Courier, monospace;">文化导览</text>
-					<text style="font-size: 12px; font-weight: 550 !important; font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">全部 ＞</text>
+					<text
+						style="font-size: 12px; font-weight: 550 !important; font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">全部
+						＞</text>
 				</view>
 				<scroll-view class="cultural_guided_tour_img" scroll-x="true">
 					<view class="cultural_guided_tour_img_view">
 						<view class="cultural_guided_tour_img_li" v-for="item in cultural_guided_tour_img"
 							:key="item.id">
 							<image :src="item.src" style="height: 120px; width: 120px; border-radius: 10px;"></image>
-							<text style="font-size: 13px; font-weight: 550 !important; display: block;  font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">{{item.text}}</text>
+							<text
+								style="font-size: 13px; font-weight: 550 !important; display: block;  font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">{{item.text}}</text>
 						</view>
 					</view>
 				</scroll-view>
@@ -38,8 +43,11 @@
 			</view>
 			<view class="cultural_collage">
 				<view class="cultural_collage_text">
-					<text style="font-weight: 550 !important; font-family:‘Courier New’, Courier, monospace;">文化拼贴</text>
-					<text style="font-size: 12px; font-weight: 550 !important; font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">全部 ＞</text>
+					<text
+						style="font-weight: 550 !important; font-family:‘Courier New’, Courier, monospace;">文化拼贴</text>
+					<text
+						style="font-size: 12px; font-weight: 550 !important; font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">全部
+						＞</text>
 				</view>
 				<image src="../../static/logo.png" style="height: 120px; width: 275px;border-radius: 10px;"></image>
 			</view>
@@ -87,7 +95,22 @@
 					selectedBorder: '2px #ffffff solid',
 					// bottom:25
 				},
-				find_box_herf_contents: ["文化地图", "创意小店", "创意手作", "创意IP", "创意待定"],
+				find_box_herf_contents: [{
+					text: "文化地图",
+					src: "../../static/explore_imgs/文化地图.png",
+				}, {
+					text: "创意小店",
+					src: "../../static/explore_imgs/创意小店.png",
+				}, {
+					text: "创意手作",
+					src: "../../static/explore_imgs/创意手作.png",
+				}, {
+					text: "创意 IP",
+					src: "../../static/explore_imgs/创意IP.png",
+				}, {
+					text: "创意待定",
+					src: "../../static/explore_imgs/创意待定.png",
+				}],
 				cultural_guided_tour_img: [{
 					src: "../../static/logo.png",
 					text: "宣传卡片",
@@ -122,6 +145,7 @@
 	// }
 	.find_page {
 		height: auto;
+
 		// background-color: #853e38;
 		.find_swiper {
 			height: auto;
@@ -132,15 +156,16 @@
 			z-index: -999;
 			width: 100%;
 			height: 170px;
-			.swiper-box {
-			}
+
+			.swiper-box {}
 
 			.find_swiper_text {
 				position: absolute;
 				bottom: 45px;
 				left: 8px;
 				color: #ffffff;
-				font-family:‘Courier New’, Courier, monospace;;
+				font-family: ‘Courier New’, Courier, monospace;
+				;
 			}
 		}
 
@@ -157,7 +182,7 @@
 			// padding-right: 15.3px;
 			.find_box_herf {
 				padding-top: 60px;
-
+				margin-bottom: 30px;
 				height: 50px;
 				display: flex;
 				// justify-content: center;
@@ -165,9 +190,16 @@
 				// align-items: center;
 				.find_box_herf_contents {
 					font-size: 11px;
+					width: 60px;
 					// font-weight: 600;
 					// padding-left: 5px;
-					padding-right: 14px;
+					// padding-right: 14px;
+					
+					.find_box_herf_contents_img{
+						height: 30px;
+						width: 30px;
+						margin-left: 8px;
+					}
 				}
 
 			}
@@ -178,7 +210,7 @@
 				.cultural_guided_tour_text {
 					display: flex;
 					justify-content: space-between;
-					
+
 				}
 
 				.cultural_guided_tour_img {
@@ -191,7 +223,7 @@
 
 						.cultural_guided_tour_img_li {
 							padding-right: 10px;
-							
+
 
 						}
 					}
@@ -206,7 +238,7 @@
 				.cultural_collage_text {
 					display: flex;
 					justify-content: space-between;
-					
+
 				}
 			}
 		}
