@@ -68,9 +68,11 @@
 		border-radius: 30px 30px 0 0;
 	}
 	.explore_lines {
-		margin-top: 10px;
+		margin-top: 30px;
 		display: flex;
 		font-size: 11px;
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 	.common_imgs {
 		width: 20px;
@@ -86,5 +88,6 @@
 		width: 45px;
 		height: 45px;
 		margin-left: 10px;
+		margin-top: 20px;
 	}
 </style>

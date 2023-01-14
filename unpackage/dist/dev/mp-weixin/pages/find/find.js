@@ -106,7 +106,7 @@ var components
 try {
   components = {
     uniSwiperDot: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot */ "uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot.vue */ 56))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot */ "uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot.vue */ 64))
     }
   }
 } catch (e) {
@@ -220,6 +220,14 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -250,8 +258,29 @@ var _default =
         selectedBorder: '2px #ffffff solid'
         // bottom:25
       },
-      find_box_herf_contents: ["文化地图", "创意小店", "创意手作", "创意IP", "创意待定"],
+      find_box_herf_contents: [{
+        herf: "#",
+        text: "文化地图",
+        src: "../../static/explore_imgs/文化地图.png" },
+      {
+        herf: "#",
+        text: "创意小店",
+        src: "../../static/explore_imgs/创意小店.png" },
+      {
+        herf: "#",
+        text: "创意手作",
+        src: "../../static/explore_imgs/创意手作.png" },
+      {
+        herf: "/pages/find/creativity_IP",
+        text: "创艺 IP",
+        src: "../../static/explore_imgs/创意IP.png" },
+      {
+        herf: "#",
+        text: "创意待定",
+        src: "../../static/explore_imgs/创意待定.png" }],
+
       cultural_guided_tour_img: [{
+
         src: "../../static/logo.png",
         text: "宣传卡片",
         id: 1 },
