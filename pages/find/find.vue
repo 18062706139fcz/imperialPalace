@@ -17,7 +17,7 @@
 		<view class="find_box">
 			<view class="find_box_herf">
 				<view class="find_box_herf_contents" v-for="(item) in find_box_herf_contents" :key="item.text">
-					<navigator :url="item.herf">
+					<navigator :url="item.herf" hover-stop-propagation="false" hover-class="none">
 						<image :src="item.src" class="find_box_herf_contents_img"></image>
 						<view style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace;">
 							{{item.text}}
