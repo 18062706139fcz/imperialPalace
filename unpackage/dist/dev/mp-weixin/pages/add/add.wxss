@@ -345,7 +345,7 @@ input{
   padding-bottom: 6rpx;
   padding-left: 20rpx;
   padding-right: 20rpx;
-  background-color:#72DB86;
+  background-color:#956f31;
   border-radius: 10rpx;
 }
 .mark{
@@ -498,7 +498,7 @@ input{
   color:white;
   width: 560rpx;
   height: 88rpx; 
-  background: #00cba3;
+  background: #956f31;
   border-radius: 44rpx;
 }
 .draft{

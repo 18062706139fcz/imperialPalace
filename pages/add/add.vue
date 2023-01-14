@@ -7,7 +7,7 @@
 			<view class="topic">
 				<view class="recommend_text1"><view>添加话题</view></view>
 					<view class="topic_one_container">
-						<text v-for="(item, index) in picker" :key="index" class="topic_one" @click.stop="click_topic" :style="{backgroundColor: (item==is_picker) ?'#72DB86':''}" :data-text="item">
+						<text v-for="(item, index) in picker" :key="index" class="topic_one" @click.stop="click_topic" :style="{backgroundColor: (item==is_picker) ?'#fad396':''}" :data-text="item">
 							#{{item}}
 						</text>
 					</view> 
@@ -16,7 +16,7 @@
 			<view class="local">
 				<view class="recommend_text2"><view>添加地点</view></view>
 					<view class="local_one_container">
-				      <text v-for="(item, index) in local_info" :key="index" class="local_one" @click.stop="click_site" :style="{backgroundColor:item.is_click?'#72DB86':'#00000000'}" :data-text="item.text">#{{item.text}}</text> 
+				      <text v-for="(item, index) in local_info" :key="index" class="local_one" @click.stop="click_site" :style="{backgroundColor:item.is_click?'#fad396':'#00000000'}" :data-text="item.text">#{{item.text}}</text> 
 				    </view> 
 			</view>
 			<view class="imageContainer">
@@ -345,7 +345,7 @@ input{
   padding-bottom: 6rpx;
   padding-left: 20rpx;
   padding-right: 20rpx;
-  background-color:#72DB86;
+  background-color:#956f31;
   border-radius: 10rpx;
 }
 .mark{
@@ -499,7 +499,7 @@ input{
   color:white;
   width: 560rpx;
   height: 88rpx; 
-  background: #00cba3;
+  background: #956f31;
   border-radius: 44rpx;
 }
 .draft{
