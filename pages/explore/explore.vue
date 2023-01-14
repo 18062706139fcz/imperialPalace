@@ -9,15 +9,11 @@
 						<view style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace;margin-left: 10px;"> {{item.name}}</view>
 				</view>
 			</view>
-		<uni-card
-			title="标题文字"
-			mode="style"
-			:is-shadow="true"
-			thumbnail="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/460d46d0-4fcc-11eb-8ff1-d5dcf8779628.png"
-			extra="Dcloud 2019-05-20 12:32:19"
-			note="Tips"
+		<uni-card 
+		title="文化印记" 
+		note="true"
 		>
-				uni-app 是一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可编译到iOS、Android、H5、以及各种小程序等多个平台。即使不跨端，uni-app同时也是更好的小程序开发框架。
+			<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/86ce8082b9394eceb62890363bdabbe4~tplv-k3u1fbpfcp-zoom-crop-mark:3024:3024:3024:1702.awebp?" alt="">
 		</uni-card>
 		</view>
 	</view>

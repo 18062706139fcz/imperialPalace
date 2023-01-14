@@ -9,6 +9,16 @@
 						<view style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace;margin-left: 10px;"> {{item.name}}</view>
 				</view>
 			</view>
+		<uni-card
+			title="标题文字"
+			mode="style"
+			:is-shadow="true"
+			thumbnail="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/460d46d0-4fcc-11eb-8ff1-d5dcf8779628.png"
+			extra="Dcloud 2019-05-20 12:32:19"
+			note="Tips"
+		>
+				uni-app 是一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可编译到iOS、Android、H5、以及各种小程序等多个平台。即使不跨端，uni-app同时也是更好的小程序开发框架。
+		</uni-card>
 		</view>
 	</view>
 </template>
@@ -58,9 +68,11 @@
 		border-radius: 30px 30px 0 0;
 	}
 	.explore_lines {
-		margin-top: 10px;
+		margin-top: 30px;
 		display: flex;
 		font-size: 11px;
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 	.common_imgs {
 		width: 20px;
@@ -76,5 +88,6 @@
 		width: 45px;
 		height: 45px;
 		margin-left: 10px;
+		margin-top: 20px;
 	}
 </style>
