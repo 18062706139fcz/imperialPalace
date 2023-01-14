@@ -15,7 +15,7 @@
 		<view class="find_box">
 			<view class="find_box_herf">
 				<view class="find_box_herf_contents" v-for="(item) in find_box_herf_contents" :key="item.text">
-					<navigator url="#">
+					<navigator :url="item.herf">
 						<image :src="item.src" class="find_box_herf_contents_img"></image>
 						<view style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace;">
 							{{item.text}}</view>
@@ -96,22 +96,28 @@
 					// bottom:25
 				},
 				find_box_herf_contents: [{
+					herf:"#",
 					text: "文化地图",
 					src: "../../static/explore_imgs/文化地图.png",
 				}, {
+					herf:"#",
 					text: "创意小店",
 					src: "../../static/explore_imgs/创意小店.png",
 				}, {
+					herf:"#",
 					text: "创意手作",
 					src: "../../static/explore_imgs/创意手作.png",
 				}, {
-					text: "创意 IP",
+					herf:"/pages/find/creativity_IP",
+					text: "创艺 IP",
 					src: "../../static/explore_imgs/创意IP.png",
 				}, {
+					herf:"#",
 					text: "创意待定",
 					src: "../../static/explore_imgs/创意待定.png",
 				}],
 				cultural_guided_tour_img: [{
+					
 					src: "../../static/logo.png",
 					text: "宣传卡片",
 					id: 1,

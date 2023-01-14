@@ -1,62 +1,63 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
 		{
 			"path": "pages/find/find",
 			"style": {
 				"navigationBarTitleText": "发现",
-				"navigationBarTextStyle":"black"
+				"navigationBarTextStyle": "black"
 				// "navigationBarBackgroundColor":"#ffffff"
-				
 			}
-		}
-	    ,{
-            "path" : "pages/explore/explore",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/admire/admire",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/add/add",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        },
+		},
 		{
-		    "path" : "pages/mine/mine",
-		    "style" :                                                                                    
-		    {
-				"navigationBarBackgroundColor":"#c6b089",
-		        "navigationBarTitleText": "我的",
-		        "enablePullDownRefresh": false
-		    }
-		    
+			"path": "pages/find/creativity_IP",
+			"style": {
+				"navigationBarTitleText": "创艺IP",
+				"navigationBarTextStyle": "black"
+				// "navigationBarBackgroundColor":"#ffffff"
+			}
+		}, 
+		{
+			"path": "pages/explore/explore",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/admire/admire",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/add/add",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarBackgroundColor": "#c6b089",
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false
+			}
+
 		}
-        
-        ,{
-            "path" : "component/card/card",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+
+		, {
+			"path": "component/card/card",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
 	"globalStyle": {
 		// "navigationBarTextStyle": "white",
 		// "navigationBarTitleText": "",
@@ -67,7 +68,7 @@
 	"tabBar": {
 		"backgroundColor": "#fdfbef",
 		"color": "#816b3b",
-		"selectedColor":"#853e38",
+		"selectedColor": "#853e38",
 		"list": [{
 				"pagePath": "pages/find/find",
 				"text": "发现",
@@ -98,6 +99,14 @@
 				"selectedIconPath": "static/tabbar_img/mine_on.png"
 			}
 		]
+	},
+	"condition": {
+		"current": 0,
+		"list": [{
+			"name": "创意IP",
+			"path": "pages/find/creativity_IP"
+		}]
 	}
-	
+
+
 }

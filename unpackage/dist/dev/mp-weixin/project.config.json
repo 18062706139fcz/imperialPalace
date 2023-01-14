@@ -21,7 +21,17 @@
   "libVersion": "2.29.1",
   "appid": "touristappid",
   "projectname": "imperialPalace",
-  "condition": {},
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "创意IP",
+          "pathName": "pages/find/creativity_IP",
+          "query": ""
+        }
+      ]
+    }
+  },
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
