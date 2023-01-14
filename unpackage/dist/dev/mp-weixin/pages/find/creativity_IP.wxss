@@ -29,21 +29,21 @@
   height: auto;
 }
 .creativity_IP_page .creativity_img_li {
-  padding-left: 20px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-left: 75rpx;
+  padding-bottom: 25rpx;
+  padding-top: 25rpx;
 }
 .creativity_IP_page .creativity_img_li .img_view {
-  height: 140px;
-  width: 280px;
+  height: 300rpx;
+  width: 600rpx;
   position: relative;
 }
 .creativity_IP_page .creativity_img_li .img_view .creativity_img_like {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
-  height: 20px;
-  width: 20px;
+  right: 25rpx;
+  bottom: 25rpx;
+  height: 50rpx;
+  width: 50rpx;
   z-index: 1000;
 }
 

@@ -2,14 +2,14 @@
 	<view class="creativity_IP_page"> 
 		<view class="creativity_img_li" v-for="(item,index) in creativity_img_li" :key="item.text1">
 			<view class="img_view">
-				<image :src="item.img" style="height: 140px; width: 280px;">
+				<image :src="item.img" style="height: 300rpx; width: 600rpx;">
 				</image>
 				<image @click="change_like(index)" class="creativity_img_like" :src="item.heart_like?'../../static/explore_imgs/heart_red.png':'../../static/explore_imgs/heart.png'" ></image>
 				
 			</view>
 			
-			<view style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace; color: white; font-size: 14px;">{{item.text1}}</view>
-			<view style="color:#dadada; font-size: 10px;">{{item.text2}}</view>
+			<view style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace; color: white; font-size: 30rpx;">{{item.text1}}</view>
+			<view style="color:#dadada; font-size: 25rpx;">{{item.text2}}</view>
 		</view>
 	</view>
 </template>
@@ -57,19 +57,19 @@
 		height: auto;
 		
 		.creativity_img_li{
-			padding-left: 20px;
-			padding-bottom: 10px;
-			padding-top: 10px;
+			padding-left: 75rpx;
+			padding-bottom: 25rpx;
+			padding-top: 25rpx;
 			.img_view{
-				height: 140px; 
-				width: 280px;
+				height: 300rpx; 
+				width: 600rpx;
 				position: relative;
 				.creativity_img_like{
 					position: absolute;
-					right: 10px;
-					bottom: 10px;
-					height: 20px;
-					width: 20px;
+					right: 25rpx;
+					bottom: 25rpx;
+					height: 50rpx;
+					width: 50rpx;
 					z-index: 1000;
 				}
 			}

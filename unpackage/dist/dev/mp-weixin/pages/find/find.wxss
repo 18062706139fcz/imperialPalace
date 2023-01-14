@@ -24,6 +24,16 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.mask_img.data-v-408c90a6 {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 100%;
+}
 .find_page.data-v-408c90a6 {
   height: auto;
 }
@@ -35,41 +45,34 @@
   top: 0;
   z-index: -999;
   width: 100%;
-  height: 170px;
-}
-.find_page .find_swiper .find_swiper_text.data-v-408c90a6 {
-  position: absolute;
-  bottom: 45px;
-  left: 8px;
-  color: #ffffff;
-  font-family: ‘Courier New’, Courier, monospace;
+  height: 400rpx;
 }
 .find_page .find_box.data-v-408c90a6 {
-  border-radius: 20px 20px 0 0;
+  border-radius: 30rpx 30rpx 0 0;
   width: 100%;
-  margin-top: 150px;
+  margin-top: 320rpx;
   height: auto;
   background-color: #f6f2e6;
   box-sizing: border-box;
-  padding-left: 16px;
+  padding-left: 40rpx;
 }
 .find_page .find_box .find_box_herf.data-v-408c90a6 {
-  padding-top: 60px;
-  margin-bottom: 30px;
-  height: 50px;
+  padding-top: 80rpx;
+  margin-bottom: 80rpx;
+  height: 100rpx;
   display: flex;
 }
 .find_page .find_box .find_box_herf .find_box_herf_contents.data-v-408c90a6 {
-  font-size: 11px;
-  width: 60px;
+  font-size: 24rpx;
+  width: 160rpx;
 }
 .find_page .find_box .find_box_herf .find_box_herf_contents .find_box_herf_contents_img.data-v-408c90a6 {
-  height: 30px;
-  width: 30px;
-  margin-left: 8px;
+  height: 80rpx;
+  width: 80rpx;
+  margin-left: 10rpx;
 }
 .find_page .find_box .cultural_guided_tour.data-v-408c90a6 {
-  padding-right: 25px;
+  padding-right: 60rpx;
 }
 .find_page .find_box .cultural_guided_tour .cultural_guided_tour_text.data-v-408c90a6 {
   display: flex;
@@ -83,11 +86,11 @@
   flex-wrap: nowrap;
 }
 .find_page .find_box .cultural_guided_tour .cultural_guided_tour_img .cultural_guided_tour_img_view .cultural_guided_tour_img_li.data-v-408c90a6 {
-  padding-right: 10px;
+  padding-right: 25rpx;
 }
 .find_page .find_box .cultural_collage.data-v-408c90a6 {
-  margin-top: 50px;
-  padding-right: 25px;
+  margin-top: 120rpx;
+  padding-right: 51rpx;
 }
 .find_page .find_box .cultural_collage .cultural_collage_text.data-v-408c90a6 {
   display: flex;
