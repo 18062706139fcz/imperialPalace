@@ -1,16 +1,18 @@
 <template>
 	<view class="find_page">
+		<view @click="img_display"  v-if="index>0" class="mask_img" style="display: flex; justify-content: center; align-items: center;">
+			<image :src="'../../static/find_img/poster'+index+'.jpg'" style="height: 800rpx; width: 400rpx;"></image>
+		</view>
 		<view class="find_swiper">
-			<uni-swiper-dot :info="info" :current="current" field="content" mode="dot" :dotsStyles="dotsStyles">
-				<swiper class="swiper-box" @change="change" autoplay="true" circular="true">
-					<swiper-item v-for="(item ,index) in info" :key="item.id">
-						<view class="swiper-item">
-							{{item.content}}
-						</view>
+			<uni-swiper-dot :info="info" :current="current" @clickItem="clickItem" field="content" mode="dot"
+				:dotsStyles="dotsStyles" style="height: 400rpx;">
+				<swiper :current="current1" class="swiper-box" @change="change" autoplay="true" circular="true"
+					style="height: 400rpx;">
+					<swiper-item v-for="(item ,index) in info" :key="item.id" style="height: 400rpx;">
+						<image @click="img_show(index)" :src="item.content" mode="scaleToFill" style="width: 750rpx; height: 400rpx;"></image>
 					</swiper-item>
 				</swiper>
 			</uni-swiper-dot>
-			<text class="find_swiper_text">社会活动实践海报</text>
 		</view>
 		<view class="find_box">
 			<view class="find_box_herf">
@@ -18,45 +20,51 @@
 					<navigator :url="item.herf">
 						<image :src="item.src" class="find_box_herf_contents_img"></image>
 						<view style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace;">
-							{{item.text}}</view>
+							{{item.text}}
+						</view>
 					</navigator>
 				</view>
 			</view>
 			<view class="cultural_guided_tour">
-				<view class="cultural_guided_tour_text">
+				<view class="cultural_guided_tour_text" style="padding-bottom: 20rpx;">
 					<text style="font-family:‘Courier New’, Courier, monospace;">文化导览</text>
 					<text
-						style="font-size: 12px; font-weight: 550 !important; font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">全部
-						＞</text>
+						style="font-size: 24rpx; font-weight: 550 !important; font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">全部 ></text>
 				</view>
 				<scroll-view class="cultural_guided_tour_img" scroll-x="true">
 					<view class="cultural_guided_tour_img_view">
 						<view class="cultural_guided_tour_img_li" v-for="item in cultural_guided_tour_img"
 							:key="item.id">
-							<image :src="item.src" style="height: 120px; width: 120px; border-radius: 10px;"></image>
+							<image :src="item.src" style="height: 280rpx; width: 280rpx; border-radius: 28rpx;">
+							</image>
 							<text
-								style="font-size: 13px; font-weight: 550 !important; display: block;  font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">{{item.text}}</text>
+								style="font-size: 30rpx; font-weight: 550 !important; display: block;  font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">{{item.text}}</text>
 						</view>
 					</view>
 				</scroll-view>
 
 			</view>
-			<view class="cultural_collage">
-				<view class="cultural_collage_text">
+			<view class="cultural_collage" style="padding-bottom: 60rpx;">
+				<view class="cultural_collage_text" style="padding-bottom: 20rpx;">
 					<text
-						style="font-weight: 550 !important; font-family:‘Courier New’, Courier, monospace;">文化拼贴</text>
+						style=" font-weight: 550 !important; font-family:‘Courier New’, Courier, monospace;">文化拼贴</text>
 					<text
-						style="font-size: 12px; font-weight: 550 !important; font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">全部
-						＞</text>
+						style="font-size: 24rpx; font-weight: 550 !important; font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">全部 ></text>
 				</view>
-				<image src="../../static/logo.png" style="height: 120px; width: 275px;border-radius: 10px;"></image>
+				<image src="../../static/logo.png"
+					style="height: 300rpx; width: 600rpx;border-radius: 24rpx; margin-left: 35rpx;"></image>
 			</view>
-			<view class="cultural_imprint" style="margin-top: 30px;">
-				<text style="font-weight: 550 !important; font-family:‘Courier New’, Courier, monospace;">身边的文化印记</text>
-				<view class="cultural_imprint_img" style="display: flex; padding-bottom: 50px;">
+			<view class="cultural_imprint" style="margin-top: 66rpx;">
+				<view style="padding-bottom: 20rpx;">
+					<text
+						style="font-weight: 550 !important; font-family:‘Courier New’, Courier, monospace;">身边的文化印记</text>
+
+				</view>
+				<view class="cultural_imprint_img" style="display: flex; padding-bottom: 100rpx; ">
 					<image src="../../static/logo.png"
-						style="height: 150px; width: 135px;border-radius: 10px; padding-right: 15px;"></image>
-					<image src="../../static/logo.png" style="height: 120px; width: 120px;border-radius: 10px;"></image>
+						style="height: 324rpx; width: 280rpx;border-radius: 24rpx; padding-right: 90rpx;"></image>
+					<image src="../../static/logo.png" style="height: 260rpx; width: 260rpx;border-radius: 24rpx;">
+					</image>
 				</view>
 
 			</view>
@@ -69,55 +77,59 @@
 	export default {
 		data() {
 			return {
+				index:0,
 				info: [{
-					content: '内容 A',
+					content: '../../static/find_img/poster11.jpg',
 					id: 1,
 				}, {
-					content: '内容 B',
+					content: '../../static/find_img/poster12.jpg',
 					id: 2,
 				}, {
-					content: '内容 C',
+					content: '../../static/find_img/poster13.jpg',
 					id: 3,
 				}, {
-					content: '内容 D',
+					content: '../../static/find_img/poster14.jpg',
 					id: 4,
 				}, {
-					content: '内容 E',
+					content: '../../static/find_img/poster15.jpg',
 					id: 5,
+				}, {
+					content: '../../static/find_img/poster16.jpg',
+					id: 6,
 				}],
 				current: 0,
 				dotsStyles: { //圆点的样式
 
 					backgroundColor: 'transparent',
-					border: '2px #ffffff solid',
+					border: '6rpx #ffffff solid',
 					color: '#ffffff',
 					selectedBackgroundColor: '#ffffff',
-					selectedBorder: '2px #ffffff solid',
-					// bottom:25
+					selectedBorder: '6rpx #ffffff solid',
+					bottom: 50
 				},
 				find_box_herf_contents: [{
-					herf:"#",
+					herf: "#",
 					text: "文化地图",
 					src: "../../static/explore_imgs/文化地图.png",
 				}, {
-					herf:"#",
+					herf: "#",
 					text: "创意小店",
 					src: "../../static/explore_imgs/创意小店.png",
 				}, {
-					herf:"#",
+					herf: "#",
 					text: "创意手作",
 					src: "../../static/explore_imgs/创意手作.png",
 				}, {
-					herf:"/pages/find/creativity_IP",
+					herf: "/pages/find/creativity_IP",
 					text: "创艺 IP",
 					src: "../../static/explore_imgs/创意IP.png",
 				}, {
-					herf:"#",
+					herf: "#",
 					text: "创意待定",
 					src: "../../static/explore_imgs/创意待定.png",
 				}],
 				cultural_guided_tour_img: [{
-					
+
 					src: "../../static/logo.png",
 					text: "宣传卡片",
 					id: 1,
@@ -129,7 +141,8 @@
 					src: "../../static/logo.png",
 					text: "宣传卡片",
 					id: 3,
-				}]
+				}],
+				current1: 0
 			}
 
 		},
@@ -139,6 +152,16 @@
 		methods: {
 			change(e) {
 				this.current = e.detail.current;
+			},
+			clickItem(e) {
+				this.current1 = e;
+			},
+			img_show(index){
+				this.index=index+1;
+				// console.log(this.index);
+			},
+			img_display(){
+				this.index=0;
 			}
 		}
 	}
@@ -149,6 +172,17 @@
 	// 	font-family: zhonghei;
 	// 	src: url('../../font/ZHONGHEI.TTF');
 	// }
+	.mask_img {
+		background-color: rgba(0, 0, 0, 0.7);
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+		height: 100%;
+	}
+
 	.find_page {
 		height: auto;
 
@@ -161,57 +195,49 @@
 			top: 0;
 			z-index: -999;
 			width: 100%;
-			height: 170px;
+			height: 400rpx;
 
 			.swiper-box {}
 
-			.find_swiper_text {
-				position: absolute;
-				bottom: 45px;
-				left: 8px;
-				color: #ffffff;
-				font-family: ‘Courier New’, Courier, monospace;
-				;
-			}
 		}
 
 		.find_box {
-			border-radius: 20px 20px 0 0;
+			border-radius: 30rpx 30rpx 0 0;
 			// position: absolute;
 			width: 100%;
-			margin-top: 150px;
+			margin-top: 320rpx;
 			height: auto;
 			background-color: #f6f2e6;
 			box-sizing: border-box;
-			padding-left: 16px;
+			padding-left: 40rpx;
 
 			// padding-right: 15.3px;
 			.find_box_herf {
-				padding-top: 60px;
-				margin-bottom: 30px;
-				height: 50px;
+				padding-top: 80rpx;
+				margin-bottom: 80rpx;
+				height: 100rpx;
 				display: flex;
 				// justify-content: center;
 
 				// align-items: center;
 				.find_box_herf_contents {
-					font-size: 11px;
-					width: 60px;
+					font-size: 24rpx;
+					width: 160rpx;
 					// font-weight: 600;
 					// padding-left: 5px;
 					// padding-right: 14px;
-					
-					.find_box_herf_contents_img{
-						height: 30px;
-						width: 30px;
-						margin-left: 8px;
+
+					.find_box_herf_contents_img {
+						height: 80rpx;
+						width: 80rpx;
+						margin-left: 10rpx;
 					}
 				}
 
 			}
 
 			.cultural_guided_tour {
-				padding-right: 25px;
+				padding-right: 60rpx;
 
 				.cultural_guided_tour_text {
 					display: flex;
@@ -228,7 +254,7 @@
 						flex-wrap: nowrap;
 
 						.cultural_guided_tour_img_li {
-							padding-right: 10px;
+							padding-right: 25rpx;
 
 
 						}
@@ -238,8 +264,8 @@
 			}
 
 			.cultural_collage {
-				margin-top: 50px;
-				padding-right: 25px;
+				margin-top: 120rpx;
+				padding-right: 51rpx;
 
 				.cultural_collage_text {
 					display: flex;
