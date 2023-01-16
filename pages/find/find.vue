@@ -51,8 +51,11 @@
 					<text
 						style="font-size: 24rpx; font-weight: 550 !important; font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">全部 ></text>
 				</view>
-				<image src="../../static/logo.png"
-					style="height: 300rpx; width: 600rpx;border-radius: 24rpx; margin-left: 35rpx;"></image>
+				<navigator url="/pages/find/cultural_collage" hover-stop-propagation="false" hover-class="none">
+					<image src="../../static/find_img/cultural_collage.png"
+						style="height: 300rpx; width: 600rpx;border-radius: 24rpx; margin-left: 35rpx;"></image>
+				</navigator>
+				
 			</view>
 			<view class="cultural_imprint" style="margin-top: 66rpx;">
 				<view style="padding-bottom: 20rpx;">
