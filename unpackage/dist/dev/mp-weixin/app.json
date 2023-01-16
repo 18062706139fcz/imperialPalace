@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/find/find",
+    "pages/find/cultural_collage",
     "pages/find/creativity_IP",
     "pages/explore/explore",
     "pages/admire/admire",

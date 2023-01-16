@@ -10,6 +10,14 @@
 			}
 		},
 		{
+			"path": "pages/find/cultural_collage",
+			"style": {
+				"navigationBarTitleText": "文化拼贴",
+				"navigationBarTextStyle": "black"
+				// "navigationBarBackgroundColor":"#ffffff"
+			}
+		}, 
+		{
 			"path": "pages/find/creativity_IP",
 			"style": {
 				"navigationBarTitleText": "创艺IP",
