@@ -25,8 +25,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "创意IP",
-          "pathName": "pages/find/creativity_IP",
+          "name": "文化导览",
+          "pathName": "pages/find/cultural_guided_tour",
           "query": ""
         }
       ]

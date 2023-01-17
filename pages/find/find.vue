@@ -28,8 +28,12 @@
 			<view class="cultural_guided_tour">
 				<view class="cultural_guided_tour_text" style="padding-bottom: 20rpx;">
 					<text style="font-family:‘Courier New’, Courier, monospace;">文化导览</text>
-					<text
-						style="font-size: 24rpx; font-weight: 550 !important; font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">全部 ></text>
+					<navigator url="/pages/find/cultural_guided_tour" hover-stop-propagation="false" hover-class="none" style="display: inline;"> 
+						<text
+							style="font-size: 24rpx; font-weight: 550 !important; font-family:‘Franklin Gothic Medium’, ‘Arial Narrow’, Arial, sans-serif;">全部 >
+						</text>
+					</navigator>
+					
 				</view>
 				<scroll-view class="cultural_guided_tour_img" scroll-x="true">
 					<view class="cultural_guided_tour_img_view">
@@ -64,9 +68,9 @@
 
 				</view>
 				<view class="cultural_imprint_img" style="display: flex; padding-bottom: 100rpx; ">
-					<image src="../../static/logo.png"
+					<image src="../../static/find_img/poster2.jpg"
 						style="height: 324rpx; width: 280rpx;border-radius: 24rpx; padding-right: 90rpx;"></image>
-					<image src="../../static/logo.png" style="height: 260rpx; width: 260rpx;border-radius: 24rpx;">
+					<image src="../../static/find_img/promotional_cards2.jpg" style="height: 260rpx; width: 260rpx;border-radius: 24rpx;">
 					</image>
 				</view>
 
@@ -111,7 +115,7 @@
 					bottom: 50
 				},
 				find_box_herf_contents: [{
-					herf: "#",
+					herf: "/pages/find/cultural_map",
 					text: "文化地图",
 					src: "../../static/explore_imgs/文化地图.png",
 				}, {
@@ -132,18 +136,26 @@
 					src: "../../static/explore_imgs/创意待定.png",
 				}],
 				cultural_guided_tour_img: [{
-
-					src: "../../static/logo.png",
+					src: "../../static/find_img/promotional_cards1.jpg",
 					text: "宣传卡片",
 					id: 1,
 				}, {
-					src: "../../static/logo.png",
+					src: "../../static/find_img/promotional_cards2.jpg",
 					text: "宣传卡片",
 					id: 2,
 				}, {
-					src: "../../static/logo.png",
+					src: "../../static/find_img/promotional_cards3.jpg",
 					text: "宣传卡片",
 					id: 3,
+				},
+				 {
+					src: "../../static/find_img/promotional_cards4.jpg",
+					text: "宣传卡片",
+					id: 4,
+				}, {
+					src: "../../static/find_img/promotional_cards5.jpg",
+					text: "宣传卡片",
+					id: 5,
 				}],
 				current1: 0
 			}

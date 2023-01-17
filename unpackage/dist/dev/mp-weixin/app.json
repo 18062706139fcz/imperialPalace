@@ -1,6 +1,9 @@
 {
   "pages": [
     "pages/find/find",
+    "pages/find/cultural_map",
+    "pages/find/cultural_guided_tour",
+    "pages/find/cultural_collage",
     "pages/find/creativity_IP",
     "pages/explore/explore",
     "pages/admire/admire",
