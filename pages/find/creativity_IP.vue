@@ -5,7 +5,6 @@
 				<image :src="item.img" style="height: 300rpx; width: 600rpx;">
 				</image>
 				<image @click="change_like(index)" class="creativity_img_like" :src="item.heart_like?'../../static/explore_imgs/heart_red.png':'../../static/explore_imgs/heart.png'" ></image>
-				
 			</view>
 			
 			<view style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace; color: white; font-size: 30rpx;">{{item.text1}}</view>
@@ -51,7 +50,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.creativity_IP_page{
 		background-color: #3A5D55;
 		height: auto;

@@ -1,11 +1,14 @@
 import App from './App'
+// import router from './router/router.js'
+import api from "@/common/api.js"
+Vue.prototype.$api=api;
 
 // #ifndef VUE3
 import Vue from 'vue'
 Vue.config.productionTip = false
 App.mpType = 'app'
 const app = new Vue({
-    ...App
+    ...App,
 })
 app.$mount()
 // #endif

@@ -1,3 +1,3 @@
 export default {
-    api: "https://travel.rykerfeng.cn",
+    api: "https://www.rykerfeng.cn",
 }

@@ -24,21 +24,21 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.creativity_IP_page {
+.creativity_IP_page.data-v-26d10bb1 {
   background-color: #3A5D55;
   height: auto;
 }
-.creativity_IP_page .creativity_img_li {
+.creativity_IP_page .creativity_img_li.data-v-26d10bb1 {
   padding-left: 75rpx;
   padding-bottom: 25rpx;
   padding-top: 25rpx;
 }
-.creativity_IP_page .creativity_img_li .img_view {
+.creativity_IP_page .creativity_img_li .img_view.data-v-26d10bb1 {
   height: 300rpx;
   width: 600rpx;
   position: relative;
 }
-.creativity_IP_page .creativity_img_li .img_view .creativity_img_like {
+.creativity_IP_page .creativity_img_li .img_view .creativity_img_like.data-v-26d10bb1 {
   position: absolute;
   right: 25rpx;
   bottom: 25rpx;
