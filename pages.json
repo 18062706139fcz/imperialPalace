@@ -44,21 +44,21 @@
 		{
 			"path": "pages/explore/explore",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "探索",
 				"enablePullDownRefresh": false
 			}
 
 		}, {
 			"path": "pages/admire/admire",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "观赏",
 				"enablePullDownRefresh": false
 			}
 
 		}, {
 			"path": "pages/add/add",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "添加",
 				"enablePullDownRefresh": false
 			}
 

@@ -4,7 +4,7 @@
 			<view class="img_view">
 				<image :src="item.img" style="height: 300rpx; width: 600rpx;">
 				</image>
-				<image @click="change_like(index)" class="creativity_img_like" :src="item.heart_like?'../../static/explore_imgs/heart_red.png':'../../static/explore_imgs/heart.png'" ></image>
+				<image @click="change_like(index)" class="creativity_img_like" :src="item.heart_like?'https://www.rykerfeng.cn/travel2/image/explore_imgs/heart_red.png':'https://www.rykerfeng.cn/travel2/image/explore_imgs/heart.png'" ></image>
 			</view>
 			
 			<view style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace; color: white; font-size: 30rpx;">{{item.text1}}</view>
@@ -18,22 +18,22 @@
 		data(){
 			return{
 				creativity_img_li:[{
-					img:"../../static/explore_imgs/red_magnolia.png",
+					img:"https://www.rykerfeng.cn/travel2/image/explore_imgs/red_magnolia.png",
 					text1:"木兰红色版本（名字）",
 					text2:"其他说明",
 					heart_like:0
 				},{
-					img:"../../static/explore_imgs/blue_magnolia.png",
+					img:"https://www.rykerfeng.cn/travel2/image/explore_imgs/blue_magnolia.png",
 					text1:"木兰蓝色版本（名字）",
 					text2:"其他说明",
 					heart_like:0
 				},{
-					img:"../../static/explore_imgs/chickpeas.png",
+					img:"https://www.rykerfeng.cn/travel2/image/explore_imgs/chickpeas.png",
 					text1:"赤小豆 蕲春",
 					text2:"其他说明",
 					heart_like:0
 				},{
-					img:"../../static/explore_imgs/bohang.png",
+					img:"https://www.rykerfeng.cn/travel2/image/explore_imgs/bohang.png",
 					text1:"保康",
 					text2:"其他说明",
 					heart_like:0
