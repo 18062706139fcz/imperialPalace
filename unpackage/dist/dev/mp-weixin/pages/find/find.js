@@ -101,7 +101,7 @@ var components
 try {
   components = {
     uniSwiperDot: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot */ "uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot.vue */ 103))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot */ "uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot.vue */ 111))
     },
   }
 } catch (e) {
@@ -251,22 +251,22 @@ var _default = {
     return {
       index: 0,
       info: [{
-        content: '../../static/find_img/poster11.jpg',
+        content: 'https://www.rykerfeng.cn/travel2/image/find_img/poster11.jpg',
         id: 1
       }, {
-        content: '../../static/find_img/poster12.jpg',
+        content: 'https://www.rykerfeng.cn/travel2/image/find_img/poster12.jpg',
         id: 2
       }, {
-        content: '../../static/find_img/poster13.jpg',
+        content: 'https://www.rykerfeng.cn/travel2/image/find_img/poster13.jpg',
         id: 3
       }, {
-        content: '../../static/find_img/poster14.jpg',
+        content: 'https://www.rykerfeng.cn/travel2/image/find_img/poster14.jpg',
         id: 4
       }, {
-        content: '../../static/find_img/poster15.jpg',
+        content: 'https://www.rykerfeng.cn/travel2/image/find_img/poster15.jpg',
         id: 5
       }, {
-        content: '../../static/find_img/poster16.jpg',
+        content: 'https://www.rykerfeng.cn/travel2/image/find_img/poster16.jpg',
         id: 6
       }],
       current: 0,
@@ -283,42 +283,42 @@ var _default = {
       find_box_herf_contents: [{
         herf: "/pages/find/cultural_map",
         text: "文化地图",
-        src: "../../static/explore_imgs/文化地图.png"
+        src: "https://www.rykerfeng.cn/travel2/image/explore_imgs/文化地图.png"
       }, {
         herf: "#",
         text: "创意小店",
-        src: "../../static/explore_imgs/创意小店.png"
+        src: "https://www.rykerfeng.cn/travel2/image/explore_imgs/创意小店.png"
       }, {
         herf: "#",
         text: "创意手作",
-        src: "../../static/explore_imgs/创意手作.png"
+        src: "https://www.rykerfeng.cn/travel2/image/explore_imgs/创意手作.png"
       }, {
         herf: "/pages/find/creativity_IP",
         text: "创艺 IP",
-        src: "../../static/explore_imgs/创意IP.png"
+        src: "https://www.rykerfeng.cn/travel2/image/explore_imgs/创意IP.png"
       }, {
         herf: "#",
         text: "创意待定",
-        src: "../../static/explore_imgs/创意待定.png"
+        src: "https://www.rykerfeng.cn/travel2/image/explore_imgs/创意待定.png"
       }],
       cultural_guided_tour_img: [{
-        src: "../../static/find_img/promotional_cards1.jpg",
+        src: "https://www.rykerfeng.cn/travel2/image/find_img/promotional_cards1.jpg",
         text: "宣传卡片",
         id: 1
       }, {
-        src: "../../static/find_img/promotional_cards2.jpg",
+        src: "https://www.rykerfeng.cn/travel2/image/find_img/promotional_cards2.jpg",
         text: "宣传卡片",
         id: 2
       }, {
-        src: "../../static/find_img/promotional_cards3.jpg",
+        src: "https://www.rykerfeng.cn/travel2/image/find_img/promotional_cards3.jpg",
         text: "宣传卡片",
         id: 3
       }, {
-        src: "../../static/find_img/promotional_cards4.jpg",
+        src: "https://www.rykerfeng.cn/travel2/image/find_img/promotional_cards4.jpg",
         text: "宣传卡片",
         id: 4
       }, {
-        src: "../../static/find_img/promotional_cards5.jpg",
+        src: "https://www.rykerfeng.cn/travel2/image/find_img/promotional_cards5.jpg",
         text: "宣传卡片",
         id: 5
       }],

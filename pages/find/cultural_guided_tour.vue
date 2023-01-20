@@ -15,10 +15,10 @@
 						<image :src="item.img_src"
 							style="height: 300rpx; width: 600rpx; border-radius: 30rpx 30rpx 0 0;">
 						</image>
-						<view class="cultural_guided_exhibition_text1">
+						<view class="cultural_guided_exhibition_text1" >
 							{{item.title}}
 						</view>
-						<view style="color:#dadada; font-size: 25rpx;">{{item.description}}</view>
+						<text style="display: block; text-align：justify; color:#dadada; font-size: 25rpx; padding-left: 20rpx;padding-right: 20rpx;">{{item.description}}</text>
 					</view>
 				</view>
 			</view>
@@ -28,10 +28,13 @@
 						<image :src="item.img_src"
 							style="height: 300rpx; width: 600rpx; border-radius: 30rpx 30rpx 0 0;">
 						</image>
-						<view class="cultural_guided_exhibition_text1">
+						<view class="cultural_guided_exhibition_text1" >
 							{{item.title}}
 						</view>
-						<view style="color:#dadada; font-size: 25rpx;">{{item.description}}</view>
+						
+						<view style="color:#dadada; font-size: 25rpx; padding-left: 20rpx;padding-right: 20rpx;">{{item.description}}</view>
+						<view style="color:#dadada; font-size: 25rpx; padding-left: 20rpx;padding-right: 20rpx;">{{item.phone}}</view>
+						
 					</view>
 				</view>
 			</view>
@@ -138,6 +141,8 @@
 						-webkit-line-clamp: 1;
 						word-break: break-all;
 						margin-bottom: 10rpx;
+						padding-left: 20rpx;
+						padding-right: 20rpx;
 					}
 				}
 
