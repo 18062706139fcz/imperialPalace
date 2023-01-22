@@ -19,6 +19,7 @@
 		>
 			<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/86ce8082b9394eceb62890363bdabbe4~tplv-k3u1fbpfcp-zoom-crop-mark:3024:3024:3024:1702.awebp?" alt="">
 		</uni-card>
+		<button open-type="contact" bindcontact="handleContact" session-from="sessionFrom">Test</button>
 		</view>
 	</view>
 </template>
