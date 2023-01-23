@@ -115,20 +115,20 @@
 
 		.cultural_guided_content {
 			padding-bottom: 200rpx;
-
+		
 			.cultural_guided_exhibition_li {
-
+		
 				margin-left: 75rpx;
 				margin-bottom: 100rpx;
 				margin-top: 25rpx;
-
+		
 				.img_view {
 					background-color: #517970;
 					height: 500rpx;
 					width: 600rpx;
 					position: relative;
 					border-radius: 30rpx;
-
+		
 					.cultural_guided_exhibition_text1 {
 						font-weight: 600 !important;
 						font-family: ‘Courier New’, Courier, monospace;
@@ -145,9 +145,9 @@
 						padding-right: 20rpx;
 					}
 				}
-
+		
 			}
-
+		
 		}
 	}
 </style>
