@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "创意手作",
   "enablePullDownRefresh": false,
   "usingComponents": {
     "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup",

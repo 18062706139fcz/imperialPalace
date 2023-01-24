@@ -1,0 +1,14 @@
+.move_container {
+    position: absolute;
+    top: 100rpx;
+    border: 2rpx solid red;
+}
+
+.move_item {
+    opacity: 0.7;
+    background: red;
+    border-radius: 50%;
+}
+
+.move_container {
+}

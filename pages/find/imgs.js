@@ -1,172 +1,91 @@
 export const stickers = [
-	{
-		idx: 1,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(1).png',
-	},
-	{
-		idx: 2,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(2).png',
-	},
-	{
-		idx: 3,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(3).png',
-	},
-	{
-		idx: 4,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(4).png',
-	},
-	{
-		idx: 5,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(5).png',
-	},
-	{
-		idx: 6,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(6).png',
-	},
-	{
-		idx: 7,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(7).png',
-	},
-	{
-		idx: 8,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(8).png',
-	},
-	{
-		idx: 9,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(9).png',
-	},
-	{
-		idx: 10,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(10).png',
-	},
-	{
-		idx: 11,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(11).png',
-	},
-	{
-		idx: 12,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E5%BB%BA%E7%AD%91%20(1).png',
-	},
-	{
-		idx: 13,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E5%BB%BA%E7%AD%91%20(2).png',
-	},
-	{
-		idx: 14,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E5%BB%BA%E7%AD%91%20(3).png',
-	},
-	{
-		idx: 15,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E5%BB%BA%E7%AD%91%20(4).png',
-	},
-	{
-		idx: 16,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E5%BB%BA%E7%AD%91%20(5).png',
-	},
-	{
-		id: 17,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E8%BE%B9%E6%A1%86%20(1).png'
-	},
-	{
-		id: 18,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E8%BE%B9%E6%A1%86%20(2).png'
-	},
-	{
-		id: 19,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E8%BE%B9%E6%A1%86%20(3).png'
-	},
-	{
-		id: 20,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E8%BE%B9%E6%A1%86%20(4).png'
-	},
-	{
-		id: 21,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E8%BE%B9%E6%A1%86%20(5).png'
-	},
-	{
-		id: 22,
-		url: 'https://www.rykerfeng.cn/travel2/image/IPDraw/%E8%BE%B9%E6%A1%86%20(6).png'
-	},
+ {
+  idx: 1,
+  url: '../../static/贴图/边框 (1).webp',
+ },
+ {
+  idx: 2,
+  url: '../../static/贴图/边框 (2).webp',
+ },
+ {
+  idx: 3,
+  url: '../../static/贴图/边框 (3).webp',
+ },
+ {
+  idx: 4,
+  url: '../../static/贴图/%E4%BA%BA%E7%89%A9%20(4).webp',
+ },
+ {
+  idx: 5,
+  url: '../../static/贴图/%E4%BA%BA%E7%89%A9%20(5).webp',
+ },
+ {
+  idx: 6,
+  url: '../../static/贴图/%E4%BA%BA%E7%89%A9%20(6).webp',
+ },
+ {
+  idx: 7,
+  url: '../../static/贴图/%E4%BA%BA%E7%89%A9%20(7).webp',
+ },
+ {
+  idx: 8,
+  url: '../../static/贴图/%E4%BA%BA%E7%89%A9%20(8).webp',
+ },
+ {
+  idx: 9,
+  url: '../../static/贴图/%E4%BA%BA%E7%89%A9%20(9).webp',
+ },
+ {
+  idx: 10,
+  url: '../../static/贴图/%E4%BA%BA%E7%89%A9%20(10).webp',
+ },
+ {
+  idx: 11,
+  url: '../../static/贴图/%E4%BA%BA%E7%89%A9%20(11).webp',
+ },
+ {
+  idx: 12,
+  url: '../../static/贴图/%E5%BB%BA%E7%AD%91%20(1).webp',
+ },
+ {
+  idx: 13,
+  url: '../../static/贴图/%E5%BB%BA%E7%AD%91%20(2).webp',
+ },
+ {
+  idx: 14,
+  url: '../../static/贴图/%E5%BB%BA%E7%AD%91%20(3).webp',
+ },
+ {
+  idx: 15,
+  url: '../../static/贴图/%E5%BB%BA%E7%AD%91%20(4).webp',
+ },
+ {
+  idx: 16,
+  url: '../../static/贴图/%E5%BB%BA%E7%AD%91%20(5).webp',
+ },
+ {
+  id: 17,
+  url: '../../static/贴图/%E8%BE%B9%E6%A1%86%20(1).webp'
+ },
+ {
+  id: 18,
+  url: '../../static/贴图/%E8%BE%B9%E6%A1%86%20(2).webp'
+ },
+ {
+  id: 19,
+  url: '../../static/贴图/%E8%BE%B9%E6%A1%86%20(3).webp'
+ },
+ {
+  id: 20,
+  url: '../../static/贴图/%E8%BE%B9%E6%A1%86%20(4).webp'
+ },
+ {
+  id: 21,
+  url: '../../static/贴图/%E8%BE%B9%E6%A1%86%20(5).webp'
+ },
+ {
+  id: 22,
+  url: '../../static/贴图/%E8%BE%B9%E6%A1%86%20(6).webp'
+ },
 ]
 export const chooseImages = []
-// 	{
-// 		x: 160,
-// 		y: 50,
-// 		chosedImg: false,
-// 		stv: {
-// 			offsetX: 160,
-// 			offsetY: 50,
-// 			zoom: false, //是否缩放状态
-// 			distance: 0,  //两指距离
-// 			scale: 1,  //缩放倍数
-// 			width: 50,
-// 			height: 50,
-// 		},
-// 		url:'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(1).png',
-// 		idx: 1
-// 	},
-// 	{
-// 		x: 160,
-// 		y: 50,
-// 		chosedImg: false,
-// 		stv: {
-// 			offsetX: 160,
-// 			offsetY: 50,
-// 			zoom: false, //是否缩放状态
-// 			distance: 0,  //两指距离
-// 			scale: 1,  //缩放倍数
-// 			width: 50,
-// 			height: 50,
-// 		},
-// 		url:'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(2).png',
-// 		idx: 2
-// 	},
-// 	{
-// 		x: 160,
-// 		y: 50,
-// 		chosedImg: false,
-// 		stv: {
-// 			offsetX: 160,
-// 			offsetY: 50,
-// 			zoom: false, //是否缩放状态
-// 			distance: 0,  //两指距离
-// 			scale: 1,  //缩放倍数
-// 			width: 50,
-// 			height: 50,
-// 		},
-// 		url:'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(3).png',
-// 		idx: 3
-// 	},
-// 	{
-// 		x: 160,
-// 		y: 50,
-// 		chosedImg: false,
-// 		stv: {
-// 			offsetX: 160,
-// 			offsetY: 50,
-// 			zoom: false, //是否缩放状态
-// 			distance: 0,  //两指距离
-// 			scale: 1,  //缩放倍数
-// 			width: 50,
-// 			height: 50,
-// 		},
-// 		url:'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(4).png',
-// 		idx: 4
-// 	},
-// 	{
-// 		x: 160,
-// 		y: 50,
-// 		chosedImg: false,
-// 		stv: {
-// 			offsetX: 160,
-// 			offsetY: 50,
-// 			zoom: false, //是否缩放状态
-// 			distance: 0,  //两指距离
-// 			scale: 1,  //缩放倍数
-// 			width: 50,
-// 			height: 50,
-// 		},
-// 		url:'https://www.rykerfeng.cn/travel2/image/IPDraw/%E4%BA%BA%E7%89%A9%20(5).png',
-// 		idx: 5
-// 	},
-// ]
