@@ -19,6 +19,7 @@
 		>
 			<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/86ce8082b9394eceb62890363bdabbe4~tplv-k3u1fbpfcp-zoom-crop-mark:3024:3024:3024:1702.awebp?" alt="">
 		</uni-card>
+		<button open-type="contact" bindcontact="handleContact" session-from="sessionFrom">Test</button>
 		</view>
 	</view>
 </template>
@@ -36,7 +37,7 @@
 					text: "创意小店",
 					src: "https://www.rykerfeng.cn/travel2/image/explore_imgs/创意小店.png",
 				}, {
-					herf: "#",
+					herf: "/pages/find/creativeHandicraft",
 					text: "创意手作",
 					src: "https://www.rykerfeng.cn/travel2/image/explore_imgs/创意手作.png",
 				}, {

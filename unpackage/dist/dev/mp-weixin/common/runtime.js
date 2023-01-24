@@ -105,6 +105,7 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
+
 /******/ 		var cssChunks = {"uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot":1,"uni_modules/uni-card/components/uni-card/uni-card":1,"uni_modules/uni-badge/components/uni-badge/uni-badge":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
