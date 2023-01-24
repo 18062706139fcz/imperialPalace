@@ -31,23 +31,118 @@
   font-weight: 600 !important;
 }
 .mine_page .color_fill_c6b089.data-v-dcbcfe34 {
-  height: 10px;
+  padding-top: 30rpx;
   background-color: #c6b089;
+  padding-left: 60rpx;
+}
+.mine_page .color_fill_c6b089 .nickname_box.data-v-dcbcfe34 {
+  height: 170rpx;
+  display: flex;
+}
+.mine_page .color_fill_c6b089 .nickname_box .nickname_box_img.data-v-dcbcfe34 {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: relative;
+}
+.mine_page .color_fill_c6b089 .nickname_box .nickname_box_img .nickname_box_add.data-v-dcbcfe34 {
+  position: absolute;
+  height: 50rpx;
+  width: 50rpx;
+  right: 10rpx;
+  bottom: 0;
+  border-radius: 50%;
+}
+.mine_page .color_fill_c6b089 .nickname_box .nickname_box_content.data-v-dcbcfe34 {
+  width: 540rpx;
+  height: 150rpx;
+  padding-left: 50rpx;
+}
+.mine_page .color_fill_c6b089 .user_information_box.data-v-dcbcfe34 {
+  padding-top: 20rpx;
+  height: 70rpx;
+  display: flex;
+}
+.mine_page .color_fill_c6b089 .user_information_box .user_information_li.data-v-dcbcfe34 {
+  padding-right: 40rpx;
+}
+.mine_page .color_fill_c6b089 .user_information_box .user_information_tags.data-v-dcbcfe34 {
+  padding-left: 80rpx;
+  display: flex;
+  align-items: center;
+  height: 50rpx;
+}
+.mine_page .color_fill_c6b089 .user_information_box .user_information_tags .user_information_tags1.data-v-dcbcfe34 {
+  height: 40rpx;
+  width: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22rpx;
+  border-radius: 30rpx;
+  background-color: #f6f2e6;
 }
 .mine_page .color_fill_f6f2e6.data-v-dcbcfe34 {
-  border-radius: 20px 20px 0 0;
+  border-radius: 50rpx 50rpx 0 0;
   height: auto;
   background-color: #f6f2e6;
 }
-.mine_page .color_fill_f6f2e6 .login_in.data-v-dcbcfe34 {
-  padding-top: 30px;
-  height: 50px;
-  padding-left: 60px;
+.mine_page .color_fill_f6f2e6 .mine_text.data-v-dcbcfe34 {
+  display: flex;
+  color: #000000;
+  padding-top: 30rpx;
+  padding-bottom: 5rpx;
+  letter-spacing: 0.1rpx;
 }
-.mine_page .color_fill_f6f2e6 .mine_list_li.data-v-dcbcfe34 {
-  padding-top: 11px;
-  padding-left: 40px;
-  padding-bottom: 11px;
-  border-bottom: 1px solid #d6d6d6;
+.mine_page .color_fill_f6f2e6 .mine_text_border.data-v-dcbcfe34 {
+  display: flex;
+  height: 10rpx;
+}
+.mine_page .color_fill_f6f2e6 .mine_text_border .mine_text_border_view.data-v-dcbcfe34 {
+  height: 5rpx;
+  border-radius: 3rpx;
+  width: 60rpx;
+  background-color: #a40000;
+}
+.mine_page .color_fill_f6f2e6 .mine_content.data-v-dcbcfe34 {
+  padding-bottom: 200rpx;
+}
+.mine_page .color_fill_f6f2e6 .mine_content .mine_exhibition.data-v-dcbcfe34 {
+  display: flex;
+}
+.mine_page .color_fill_f6f2e6 .mine_content .mine_exhibition .mine_exhibition_li.data-v-dcbcfe34 {
+  margin-left: 75rpx;
+  margin-bottom: 80rpx;
+  margin-top: 25rpx;
+}
+.mine_page .color_fill_f6f2e6 .mine_content .mine_exhibition .mine_exhibition_li .img_view.data-v-dcbcfe34 {
+  background-color: #fffbef;
+  height: 220rpx;
+  width: 300rpx;
+  position: relative;
+  border-radius: 30rpx;
+}
+.mine_page .color_fill_f6f2e6 .mine_content .mine_exhibition .mine_exhibition_li .img_view .mine_exhibition_text1.data-v-dcbcfe34 {
+  font-weight: 600 !important;
+  font-family: ‘Courier New’, Courier, monospace;
+  color: #000000;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  word-break: break-all;
+  margin-bottom: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.mine_page .color_fill_f6f2e6 .mine_content .mine_exhibition .mine_exhibition_li .img_view .mine_exhibition_img2.data-v-dcbcfe34 {
+  height: 30rpx;
+  width: 30rpx;
+  border-radius: 50%;
+  background-color: #c6b089;
+  margin-left: 20rpx;
 }
 

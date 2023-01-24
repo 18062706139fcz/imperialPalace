@@ -36,6 +36,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    uniBadge: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-badge/components/uni-badge/uni-badge */ "uni_modules/uni-badge/components/uni-badge/uni-badge").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-badge/components/uni-badge/uni-badge.vue */ 125))
+    },
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -96,13 +119,108 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      mine_list_li: ["我的信息", "我的发布", "消息通知", "关于我们", "写给小艺"]
+      current: 1,
+      user_information_li: [{
+        number: 12,
+        text: '关注'
+      }, {
+        number: 15,
+        text: '粉丝'
+      }, {
+        number: 20,
+        text: '获赞'
+      }],
+      cultureTutor1: [{
+        img_src: '../../static/tabbar_img/find_on.png',
+        title: "作品名称"
+      }, {
+        img_src: '../../static/tabbar_img/find_on.png',
+        title: "作品名称"
+      }],
+      cultureTutor2: [{
+        img_src: '../../static/tabbar_img/find_on.png',
+        title: "作品名称"
+      }, {
+        img_src: '../../static/tabbar_img/find_on.png',
+        title: "作品名称"
+      }]
     };
   },
-  methods: {}
+  methods: {
+    click_exhibition: function click_exhibition() {
+      this.current = 1;
+    },
+    click_cultural: function click_cultural() {
+      this.current = 2;
+    }
+  }
 };
 exports.default = _default;
 
