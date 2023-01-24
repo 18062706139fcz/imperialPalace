@@ -1,4 +1,4 @@
-/*  */{
+{
     "name" : "imperialPalace",
     "appid" : "__UNI__D2086A7",
     "description" : "",
@@ -50,7 +50,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx9ab6b336acc3e8d2",
+        "appid" : "",
         "setting" : {
             "urlCheck" : false
         },

@@ -9,8 +9,7 @@
     "pages/admire/admire",
     "pages/add/add",
     "pages/mine/mine",
-    "component/card/card",
-    "pages/find/creativeHandicraft"
+    "component/card/card"
   ],
   "subPackages": [],
   "window": {

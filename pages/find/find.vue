@@ -123,7 +123,7 @@
 					text: "创意小店",
 					src: "https://www.rykerfeng.cn/travel2/image/explore_imgs/创意小店.png",
 				}, {
-					herf: "/pages/find/creativeHandicraft",
+					herf: "#",
 					text: "创意手作",
 					src: "https://www.rykerfeng.cn/travel2/image/explore_imgs/创意手作.png",
 				}, {
