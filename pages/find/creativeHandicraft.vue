@@ -3,13 +3,24 @@
 		<uni-popup ref="popup" type="message">
 			<uni-popup-message type="success" :message="'成功切换为' + showColor" :duration="2000"></uni-popup-message>
 		</uni-popup>
-	  <canvas class="canvans" disable-scroll="true" canvas-id="canvas" @touchstart='onTouchStart' @touchmove='onTouchMove' @touchend="onTouchEnd">
-		  
+	  <canvas class="canvans" disable-scroll="true" canvas-id="canvas" id="canvas">
+		<movable-area class='img-box width-full' style="width:100%; height:60vh">
+		    <!-- 贴图开始 -->
+			<view v-for="(item, index) in chooseImages">
+				<movable-view v-if="item.chosedImg"  :x="item.x" :y="item.y" direction="all"  :data-item="item.idx" >
+				  <view class='sticker-box' >
+				    <image class='sticker width-full' mode="widthFix" :src="item.url"></image>
+				  </view>
+				  <image class='cancel' @click='cancel(item, event)' src='../../static/cancel.png'></image>
+				</movable-view>
+			</view>
+		    <!-- 贴图结束 -->
+		  </movable-area>
 	  </canvas>
 	  <view class="btns">
 	    <button type="primary" size="mini" @click="clearCanvans">清除</button>
-	    <button type="primary" size="mini" @click="redo" :disabled="redoList.length < 2">重做</button>
-	    <button type="primary" size="mini" @click="undo" :disabled="!undoList.length">撤销</button>
+	    <button type="primary" size="mini" @click="redo">画笔</button>
+	    <button type="primary" size="mini" @click="undo">贴纸</button>
 	  </view>
 	  <view class="allColors">
 		  <view :class="'color' + ' ' + item.className" 
@@ -20,24 +31,26 @@
 		  </view>
 	  </view>
 	  <view class='bottom'>
-	   <!-- <view class="sticker-lists-body">
+	  <view class="sticker-lists-body">
 	      <scroll-view class="recommend_scroll_x_box" scroll-x="true">
-	        <view class="sticker-list" wx:for="{{stickers}}" data-url="{{item}}" bindtap='changeImg'>
-	          <image src='{{item}}'></image>
+	        <view class="sticker-list" v-for="(item, index) in stickers" :data-url="item" @click='changeImg(item)'>
+	          <image :src='item.url'></image>
 	        </view>
 	      </scroll-view>
 	    </view>
 	    <view class='tab'>
-	      <button class='color-white' bindtap='save'>保存 </button>
-	    </view> -->
+	      <button type="warn" @click='save'>保存</button>
+	    </view>
 	  </view>
 	</view>
 </template>
 
 <script>
+	import { stickers, chooseImages } from './imgs.js'
 	export default {
 		data() {
 			return {
+				dom: null,
 				ctx: null,
 				timer: null,
 				position: {
@@ -141,9 +154,22 @@
 						color: '#F01AA6',
 						fontColor: '粉色'
 					},
-					
 				],
-				showColor: ''
+				chooseImages: [],
+				showColor: '',
+				stickers: [],
+				x: 160,
+				y: 50,
+				chosedImg: false,
+				stv: {
+				    offsetX: 160,
+				    offsetY: 50,
+				    zoom: false, //是否缩放状态
+				    distance: 0,  //两指距离
+				    scale: 1,  //缩放倍数
+				    width: 50,
+				    height: 50,
+				},
 			}
 		},
 		methods: {
@@ -163,6 +189,7 @@
 			    const event = e.touches[0];
 			    this.position.x = event.x
 				this.position.y = event.y
+				console.log(e)
 			},
 			onTouchMove(e) {
 				const event = e.touches[0];
@@ -190,11 +217,12 @@
 			  },
 			  // 重做
 			  redo() {
-			    this.ctx.drawImage(this.redoList[1], 0, 0, this.canvansSize.x, this.canvansSize.y);
-			    this.ctx.draw();
-			    this.undoList.unshift(this.redoList.shift());
-			    this.redoList = this.redoList
-			    this.undoList = this.undoList
+			    // this.ctx.drawImage(this.redoList[1], 0, 0, this.canvansSize.x, this.canvansSize.y);
+			    // this.ctx.draw();
+			    // this.undoList.unshift(this.redoList.shift());
+			    // this.redoList = this.redoList
+			    // this.undoList = this.undoList
+				
 			  },
 			  // 撤销
 			  undo() {
@@ -212,7 +240,50 @@
 				this.ctx.setStrokeStyle(item.color);
 				this.showColor = item.fontColor
 				this.$refs.popup.open()
-			}
+			},
+			changeImg (item) {
+				const obj = {
+					idx: true,
+					x: 160,
+					y: 50,
+					stv: {
+						offsetX: 160,
+						offsetY: 50,
+						zoom: false, //是否缩放状态
+						distance: 0,  //两指距离
+						scale: 1,  //缩放倍数
+						width: 50,
+						height: 50,
+					},
+					chosedImg: true,
+					url: item.url
+				}
+				this.chooseImages.push(obj)
+				// this.ctx.setStrokeStyle("");
+			},
+			cancel (item) {
+			    item.chosedImg = false,
+			    item.x = 150
+			    item.y = 75
+			    item.stv = {
+			        offsetX: 75,
+			        offsetY: 75,
+			        zoom: false, //是否缩放状态
+			        distance: 0,  //两指距离
+			        scale: 1,  //缩放倍数
+			        width: 50,
+			        height: 50,
+			      }
+			  },
+			  onTouchStart2() {
+				  console.log('test')
+			  },
+			  onTouchMove2() {
+				  console.log('test')
+			  },
+			  onTouchEnd2() {
+				  console.log('test')
+			  }
 		},	
 		onLoad() {
 			let that = this;
@@ -230,6 +301,9 @@
 			this.ctx.draw(false, function() {
 			    that.savaCanvans();
 			});
+			this.stickers = stickers
+			this.chooseImages = chooseImages
+			this.dom = document.getElementById('canvas')
 		},
 	}
 </script>
@@ -242,7 +316,7 @@
 }
 .canvans {
   width: 100vw;
-  height: 120.25vw;
+  height: 60vh;
   background-color: white;
 }
 .btns {
@@ -252,6 +326,7 @@
   align-items: center
 }
 .allColors {
+	height: 20vh;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -288,6 +363,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 20vh;
   background-color: rgba(230,225,225,0.8);
 }
 
@@ -396,6 +472,10 @@ movable-view .sticker-box {
   height: 100%;
   border: 1rpx dashed #ccc;
 }
+.width-full {
+	height: 50px;
+	width: 30px;
+}
 
 image.cancel {
   position: absolute;
@@ -417,4 +497,6 @@ image.cancel {
 .canvas-box canvas {
   opacity: 0;
 } 
+
+
 </style>
