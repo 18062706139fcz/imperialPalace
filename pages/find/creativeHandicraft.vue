@@ -3,32 +3,20 @@
 		<uni-popup ref="popup" type="message">
 			<uni-popup-message type="success" :message="'成功切换为' + showColor" :duration="2000"></uni-popup-message>
 		</uni-popup>
-	  <canvas class="canvans" disable-scroll="true" canvas-id="canvas" id="canvas">
-		<movable-area class='img-box width-full' style="width:100%; height:60vh">
+	  <view class="canvans" disable-scroll="true">
+		  <img src="../../static/background.jpeg" alt="" style="width: 100%;height: 80vh;position: absolute;left: 0;top: 0;">
+		<movable-area class='img-box width-full' style="width:100%; height:80vh">
 		    <!-- 贴图开始 -->
-			<view v-for="(item, index) in chooseImages">
+			<view v-for="(item, index) in chooseImages" :key="item.key">
 				<movable-view v-if="item.chosedImg"  :x="item.x" :y="item.y" direction="all"  :data-item="item.idx" >
 				  <view class='sticker-box' >
-				    <image class='sticker width-full' mode="widthFix" :src="item.url"></image>
+				    <image class='sticker width-full' mode="widthFix" :src="item.url" @touchstart="onTouchStart(item, $event)" @touchmove="onTouchMove(item, $event)" @touchend="onTouchEnd(item, $event)"></image>
 				  </view>
 				  <image class='cancel' @click='cancel(item, event)' src='../../static/cancel.png'></image>
 				</movable-view>
 			</view>
 		    <!-- 贴图结束 -->
 		  </movable-area>
-	  </canvas>
-	  <view class="btns">
-	    <button type="primary" size="mini" @click="clearCanvans">清除</button>
-	    <button type="primary" size="mini" @click="redo">画笔</button>
-	    <button type="primary" size="mini" @click="undo">贴纸</button>
-	  </view>
-	  <view class="allColors">
-		  <view :class="'color' + ' ' + item.className" 
-		  v-for="(item, index) in Colors" 
-		  :key="item.className"
-		  @click="changeColor(item)"
-		  >
-		  </view>
 	  </view>
 	  <view class='bottom'>
 	  <view class="sticker-lists-body">
@@ -185,29 +173,16 @@
 			      }
 			    })
 			},
-			onTouchStart(e) {
+			onTouchStart(item, e) {
+				console.log(item)
 			    const event = e.touches[0];
-			    this.position.x = event.x
-				this.position.y = event.y
-				console.log(e)
+			    item.x = event.pageX
+				item.y = event.pageY
 			},
-			onTouchMove(e) {
+			onTouchMove(item, e) {
 				const event = e.touches[0];
-				// 设置画笔颜色
-				// 设置线条宽度
-				this.ctx.setLineWidth(3);
-				 // 让线条圆润
-				this.ctx.setLineCap('round');
-				// 开始绘画
-				this.ctx.beginPath();
-				this.ctx.moveTo(event.x, event.y);
-				this.ctx.lineTo(this.position.x, this.position.y);
-				this.position.x = event.x
-				this.position.y = event.y
-				this.ctx.stroke();
-				this.ctx.draw(true);
-				this.ctx.closePath();
-
+				item.x = event.pageX
+				item.y = event.pageY
 			},
 			clearCanvans() {
 			    this.ctx.clearRect(0, 0, 1500, 1500);
@@ -232,9 +207,10 @@
 			    this.redoList = this.redoList,
 			    this.undoList = this.undoList
 			  },
-			onTouchEnd() {
-			    // 画笔结束时 对redoList池子里加一条记录 并且清空undoList池子
-			    this.savaCanvans();
+			onTouchEnd(item, e) {
+			    const event = e.touches[0];
+			    item.x = event.pageX
+			    item.y = event.pageY
 			},
 			changeColor(item) {
 				this.ctx.setStrokeStyle(item.color);
@@ -242,6 +218,7 @@
 				this.$refs.popup.open()
 			},
 			changeImg (item) {
+				const random = Math.random() * 10
 				const obj = {
 					idx: true,
 					x: 160,
@@ -256,7 +233,8 @@
 						height: 50,
 					},
 					chosedImg: true,
-					url: item.url
+					url: item.url,
+					key: item.url + random
 				}
 				this.chooseImages.push(obj)
 				// this.ctx.setStrokeStyle("");
@@ -316,8 +294,9 @@
 }
 .canvans {
   width: 100vw;
-  height: 60vh;
+  height: 80vh;
   background-color: white;
+  // background: url('../../static/background.jpeg');
 }
 .btns {
   padding: 15px;
@@ -325,45 +304,12 @@
   justify-content: space-around;
   align-items: center
 }
-.allColors {
-	height: 20vh;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	.color {
-		display: inline-block;
-		width: 30rpx;
-		height: 30rpx;
-		border: 1px black solid;
-	}
-	.color_1 {
-		background-color: #eeeeee;
-	}
-	.color_2 {
-		background-color: #000;
-	}
-	.color_3 {
-		background-color: #ff0000;
-	}
-	.color_4 {
-		background-color: #FAE81B;
-	}
-	.color_5 {
-		background-color: #283CF0;
-	}
-	.color_6 {
-		background-color: #F01AA6;
-	}
-	// .active {
-	// 	border-color: #2EFA49;
-	// }
-}
+
 .bottom {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 20vh;
   background-color: rgba(230,225,225,0.8);
 }
 
@@ -470,7 +416,6 @@ movable-view .sticker-box {
   position: relative;
   width:100%;
   height: 100%;
-  border: 1rpx dashed #ccc;
 }
 .width-full {
 	height: 50px;
