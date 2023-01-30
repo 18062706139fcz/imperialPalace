@@ -179,6 +179,15 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -213,19 +222,6 @@ var _default = {
     };
   },
   methods: {
-    getMark: function getMark() {
-      var _this = this;
-      this.$api.get_mark().then(function (res) {
-        if (res) {
-          for (var i in res) {
-            res[i].is_click = false;
-          }
-          _this.mark = res;
-        } else {
-          console.log("获取标签信息错误");
-        }
-      });
-    },
     set_title_img_size: function set_title_img_size(e) {
       if (e.target.dataset.index == 0) {
         var title_img_size = String(e.detail.width) + ',' + String(e.detail.height);
@@ -305,13 +301,15 @@ var _default = {
       uni.uploadFile({
         filePath: loacl_img_url,
         name: 'file',
-        url: 'https://travel.rykerfeng.cn/upload_img.php',
+        url: 'https://www.rykerfeng.cn/travel2/backend/userMoments/uploadMomentsImg.php',
         formData: {
-          user_id: user_id
+          userID: user_id
         },
         success: function success(res) {
+          // console.log(res.data);
           server_img_path.push(res.data);
-          if (res.data == 'upload fail') {
+          var code = JSON.parse(res.data).code;
+          if (code != 0) {
             uni.showToast({
               icon: 'error',
               title: '上传错误，请稍后再试'
@@ -319,16 +317,16 @@ var _default = {
             that.loadingHidden = true;
             return;
           } else {
-            console.log('upload_sync');
+            // console.log('upload_sync')
             if (url[i + 1] != undefined) {
               that.upload_sysc(server_img_path, url, i + 1, user_id, count + 1); // 递归上传
             } else {
               count++; // 在前面已经加总过了
               if (count === url.length) {
-                console.log('upload_sync1');
+                // console.log('upload_sync1')
                 that.add_to_mysql(server_img_path.join(','), user_id, that.title, that.text);
               } else {
-                console.log("upload fail");
+                // console.log("upload fail")
               }
               that.loadingHidden = true;
               return;
@@ -344,8 +342,9 @@ var _default = {
     add_to_mysql: function add_to_mysql(server_img_path, user_id, title, text) {
       var that = this;
       var local = this.get_local();
-      var longitude = local.longitude;
-      var latitude = local.latitude;
+      var longitude = uni.getStorageSync('longitude');
+      var latitude = uni.getStorageSync('latitude');
+      var location = this.user_info.location;
       var place_id = this.get_place_id(this.is_picker);
       var title_img_size = this.title_img_size;
       var mark_menu = this.is_picker;
@@ -360,27 +359,21 @@ var _default = {
         is_site_list = is_site_list + this.diy_mark_text + ',';
       }
       is_site_list = is_site_list.slice(0, is_site_list.length - 1);
-      console.log('upload_sync2');
-      console.log(server_img_path, user_id, title, text, longitude, latitude, place_id, title_img_size, mark_menu, is_site_list);
-      this.$api.change_mysql(server_img_path, user_id, title, text, longitude, latitude, place_id, title_img_size, mark_menu, is_site_list).then(function (res) {
+      // console.log('upload_sync2')
+      // console.log(JSON.parse(server_img_path).data, user_id, title, text, longitude, latitude, location, mark_menu)
+      this.$api.change_mysql(JSON.parse(server_img_path).data, user_id, title, text, longitude, latitude, location, mark_menu).then(function (res) {
         // console.log(res)
-        if (res != 'add fail') {
+        if (res.code == '0') {
           that.is_upload_success = true;
-        }
-        that.reset_data();
-        // this.onReady()
-        var dynamic_id = res;
-        uni.setStorageSync('go_dynamic_after_release', dynamic_id);
-        uni.showToast({
-          title: "发布成功",
-          duration: 300
-        });
-        setTimeout(function () {
-          uni.switchTab({
-            url: '/pages/main/main'
+          that.reset_data();
+          // this.onReady()
+          var dynamic_id = res;
+          uni.setStorageSync('go_dynamic_after_release', dynamic_id);
+          uni.showToast({
+            title: "发布成功",
+            duration: 3000
           });
-        }, 300);
-        // if()
+        }
       }, function (err) {
         console.log(err);
       });
@@ -431,10 +424,11 @@ var _default = {
   },
   onReady: function onReady() {
     // 要么有 要么为 空
-    var user_info = uni.getStorageSync('user_info') ? uni.getStorageSync('user_info') : null;
-    if (!user_info) {
-      console.log("未获取user_info内容");
-    }
+    var user_info = uni.getStorageSync('user_info');
+    // if(!user_info) {
+    // 	console.log("未获取user_info内容")
+    // }
+    // console.log(user_info);
     var local_info = uni.getStorageSync("local_info");
     for (var i in local_info) {
       local_info[i] = {
@@ -444,7 +438,21 @@ var _default = {
     }
     this.local_info = local_info;
     this.user_info = user_info;
-    this.getMark();
+    wx.getLocation({
+      type: 'gcj02',
+      //返回可以用于 wx.openLocation 的经纬度
+      success: function success(res) {
+        uni.setStorageSync("latitude", res.latitude);
+        uni.setStorageSync("longitude", res.longitude);
+        // latitude = res.latitude
+        // longitude = res.longitude
+      },
+
+      fail: function fail(err) {
+        console.log(err);
+      }
+    });
+    // console.log(this.user_info);
   }
 };
 exports.default = _default;

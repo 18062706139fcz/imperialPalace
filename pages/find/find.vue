@@ -3,6 +3,7 @@
 		<view @click="img_display"  v-if="index>0" class="mask_img" style="display: flex; justify-content: center; align-items: center;">
 			<image :src="'https://www.rykerfeng.cn/travel2/image/find_img/poster'+index+'.jpg'" style="height: 800rpx; width: 400rpx;"></image>
 		</view>
+		<!-- 轮播图 -->
 		<view class="find_swiper">
 			<uni-swiper-dot :info="info" :current="current" @clickItem="clickItem" field="content" mode="dot"
 				:dotsStyles="dotsStyles" style="height: 400rpx;">
@@ -14,9 +15,11 @@
 				</swiper>
 			</uni-swiper-dot>
 		</view>
+		<!-- 导航栏 -->
 		<view class="find_box">
 			<view class="find_box_herf">
 				<view class="find_box_herf_contents" v-for="(item) in find_box_herf_contents" :key="item.text">
+					<button class="find_box_herf_contents_btn" open-type="contact" bindcontact="handleContact" session-from="sessionFrom" v-show="item.text==='创意小店'"></button>
 					<navigator :url="item.herf" hover-stop-propagation="false" hover-class="none">
 						<image :src="item.src" class="find_box_herf_contents_img"></image>
 						<view style="font-weight: 600 !important; font-family:‘Courier New’, Courier, monospace;">
@@ -25,6 +28,7 @@
 					</navigator>
 				</view>
 			</view>
+			<!-- 文化导览 -->
 			<view class="cultural_guided_tour">
 				<view class="cultural_guided_tour_text" style="padding-bottom: 20rpx;">
 					<text style="font-family:‘Courier New’, Courier, monospace;">文化导览</text>
@@ -48,6 +52,7 @@
 				</scroll-view>
 
 			</view>
+			<!-- 文化拼贴 -->
 			<view class="cultural_collage" style="padding-bottom: 60rpx;">
 				<view class="cultural_collage_text" style="padding-bottom: 20rpx;">
 					<text
@@ -61,6 +66,7 @@
 				</navigator>
 				
 			</view>
+			<!-- 身边的文化印记 -->
 			<view class="cultural_imprint" style="margin-top: 66rpx;">
 				<view style="padding-bottom: 20rpx;">
 					<text
@@ -84,7 +90,9 @@
 	export default {
 		data() {
 			return {
+				// 轮播图预览
 				index:0,
+				// 轮播图信息
 				info: [{
 					content: 'https://www.rykerfeng.cn/travel2/image/find_img/poster11.jpg',
 					id: 1,
@@ -104,7 +112,9 @@
 					content: 'https://www.rykerfeng.cn/travel2/image/find_img/poster16.jpg',
 					id: 6,
 				}],
+				// 轮播图指示点
 				current: 0,
+				
 				dotsStyles: { //圆点的样式
 
 					backgroundColor: 'transparent',
@@ -114,6 +124,7 @@
 					selectedBorder: '6rpx #ffffff solid',
 					bottom: 50
 				},
+				// 导航栏信息
 				find_box_herf_contents: [{
 					herf: "/pages/find/cultural_map",
 					text: "文化地图",
@@ -157,6 +168,7 @@
 					text: "宣传卡片",
 					id: 5,
 				}],
+				// 轮播图下标
 				current1: 0
 			}
 
@@ -164,12 +176,14 @@
 		onLoad() {
 		},
 		methods: {
+			// 轮播图的切换
 			change(e) {
 				this.current = e.detail.current;
 			},
 			clickItem(e) {
 				this.current1 = e;
 			},
+			// 轮播图的预览和取消
 			img_show(index){
 				this.index=index+1;
 				// console.log(this.index);
@@ -237,10 +251,21 @@
 				.find_box_herf_contents {
 					font-size: 24rpx;
 					width: 160rpx;
+					height: 100rpx;
 					// font-weight: 600;
 					// padding-left: 5px;
 					// padding-right: 14px;
-
+					position: relative;
+					.find_box_herf_contents_btn{
+						position: absolute;
+						left: 0;
+						top: 0;
+						background-color: transparent;
+						height: 100rpx;
+						width: 160rpx;
+						z-index: 100;
+						
+					}
 					.find_box_herf_contents_img {
 						height: 80rpx;
 						width: 80rpx;

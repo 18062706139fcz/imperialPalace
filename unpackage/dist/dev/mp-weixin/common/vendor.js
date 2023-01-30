@@ -2401,7 +2401,18 @@ module.exports = _toPropertyKey, module.exports.__esModule = true, module.export
 
 /***/ }),
 
-/***/ 117:
+/***/ 115:
+/*!************************************************!*\
+  !*** D:/imperialPalace/static/background.jpeg ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/static/background.jpeg";
+
+/***/ }),
+
+/***/ 118:
 /*!********************************************!*\
   !*** D:/imperialPalace/pages/find/imgs.js ***!
   \********************************************/
@@ -2576,7 +2587,7 @@ module.exports = _setPrototypeOf, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
-/***/ 153:
+/***/ 154:
 /*!*****************************************************************************!*\
   !*** D:/imperialPalace/uni_modules/uni-popup/components/uni-popup/popup.js ***!
   \*****************************************************************************/
@@ -2640,7 +2651,7 @@ module.exports = _isNativeReflectConstruct, module.exports.__esModule = true, mo
 
 /***/ }),
 
-/***/ 161:
+/***/ 162:
 /*!*************************************************************************************************!*\
   !*** D:/imperialPalace/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
   \*************************************************************************************************/
@@ -2789,17 +2800,6 @@ function _toConsumableArray(arr) {
   return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
 }
 module.exports = _toConsumableArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 177:
-/*!************************************************!*\
-  !*** D:/imperialPalace/static/background.jpeg ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/static/background.jpeg";
 
 /***/ }),
 
@@ -9717,6 +9717,32 @@ var _default = {
     return http({
       url: '/travel2/backend/cultureLocation/getCultureLocationList.php'
     });
+  },
+  login: function login(code) {
+    return http({
+      url: '/travel2/backend/user/login.php?code=' + code
+    });
+  },
+  change_mysql: function change_mysql(img, user_id, title, text, longitude, latitude, place_id, mark_menu) {
+    return http({
+      method: 'GET',
+      url: '/travel2/backend/userMoments/addAMoment.php',
+      data: {
+        user_id: user_id,
+        title: title,
+        img: img,
+        text: text,
+        longitude: longitude,
+        latitude: latitude,
+        user_place: place_id,
+        mark_menu: mark_menu
+      }
+    });
+  },
+  get_uesr_works: function get_uesr_works(code) {
+    return http({
+      url: '/travel2/backend/user/getMyUserMoment.php?userid=' + code
+    });
   }
 };
 exports.default = _default;
@@ -9767,7 +9793,7 @@ var Request = /*#__PURE__*/function () {
         method = method.toUpperCase(); //小写改为大写
         if (method == "POST") {
           header = {
-            'content-type': "application/x-www-form-urlencoded"
+            'content-type': "multipart/form-data"
           };
         } else {
           header = {

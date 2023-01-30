@@ -27,8 +27,7 @@
 .mine_page.data-v-dcbcfe34 {
   height: auto;
   background-color: #c6b089;
-  font-family: ‘Courier New’, Courier, monospace;
-  font-weight: 600 !important;
+  font-weight: 550;
 }
 .mine_page .color_fill_c6b089.data-v-dcbcfe34 {
   padding-top: 30rpx;
@@ -47,12 +46,18 @@
   position: relative;
 }
 .mine_page .color_fill_c6b089 .nickname_box .nickname_box_img .nickname_box_add.data-v-dcbcfe34 {
+  background-color: #a40000;
+  color: #ffffff;
   position: absolute;
   height: 50rpx;
   width: 50rpx;
+  font-size: 60rpx;
   right: 10rpx;
   bottom: 0;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mine_page .color_fill_c6b089 .nickname_box .nickname_box_content.data-v-dcbcfe34 {
   width: 540rpx;
@@ -106,15 +111,16 @@
   background-color: #a40000;
 }
 .mine_page .color_fill_f6f2e6 .mine_content.data-v-dcbcfe34 {
-  padding-bottom: 200rpx;
+  padding-bottom: 300rpx;
 }
 .mine_page .color_fill_f6f2e6 .mine_content .mine_exhibition.data-v-dcbcfe34 {
   display: flex;
 }
 .mine_page .color_fill_f6f2e6 .mine_content .mine_exhibition .mine_exhibition_li.data-v-dcbcfe34 {
-  margin-left: 75rpx;
+  margin-left: 50rpx;
   margin-bottom: 80rpx;
   margin-top: 25rpx;
+  padding-top: 20rpx;
 }
 .mine_page .color_fill_f6f2e6 .mine_content .mine_exhibition .mine_exhibition_li .img_view.data-v-dcbcfe34 {
   background-color: #fffbef;

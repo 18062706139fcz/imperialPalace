@@ -65,6 +65,17 @@
 .find_page .find_box .find_box_herf .find_box_herf_contents.data-v-408c90a6 {
   font-size: 24rpx;
   width: 160rpx;
+  height: 100rpx;
+  position: relative;
+}
+.find_page .find_box .find_box_herf .find_box_herf_contents .find_box_herf_contents_btn.data-v-408c90a6 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  height: 100rpx;
+  width: 160rpx;
+  z-index: 100;
 }
 .find_page .find_box .find_box_herf .find_box_herf_contents .find_box_herf_contents_img.data-v-408c90a6 {
   height: 80rpx;

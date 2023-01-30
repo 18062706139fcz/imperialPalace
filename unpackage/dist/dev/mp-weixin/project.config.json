@@ -18,15 +18,15 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "2.29.2",
-  "appid": "wx4415ec214943d803",
+  "libVersion": "",
+  "appid": "wxe1773cb711e3cde1",
   "projectname": "imperialPalace",
   "condition": {
     "miniprogram": {
       "list": [
         {
-          "name": "创意手作",
-          "pathName": "pages/find/creativeHandicraft",
+          "name": "我的",
+          "pathName": "pages/mine/mine",
           "query": ""
         }
       ]

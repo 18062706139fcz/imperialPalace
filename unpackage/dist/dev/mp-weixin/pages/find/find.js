@@ -101,7 +101,7 @@ var components
 try {
   components = {
     uniSwiperDot: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot */ "uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot.vue */ 120))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot */ "uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot.vue */ 121))
     },
   }
 } catch (e) {
@@ -246,10 +246,18 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
+      // 轮播图预览
       index: 0,
+      // 轮播图信息
       info: [{
         content: 'https://www.rykerfeng.cn/travel2/image/find_img/poster11.jpg',
         id: 1
@@ -269,6 +277,7 @@ var _default = {
         content: 'https://www.rykerfeng.cn/travel2/image/find_img/poster16.jpg',
         id: 6
       }],
+      // 轮播图指示点
       current: 0,
       dotsStyles: {
         //圆点的样式
@@ -280,6 +289,7 @@ var _default = {
         selectedBorder: '6rpx #ffffff solid',
         bottom: 50
       },
+      // 导航栏信息
       find_box_herf_contents: [{
         herf: "/pages/find/cultural_map",
         text: "文化地图",
@@ -322,17 +332,20 @@ var _default = {
         text: "宣传卡片",
         id: 5
       }],
+      // 轮播图下标
       current1: 0
     };
   },
   onLoad: function onLoad() {},
   methods: {
+    // 轮播图的切换
     change: function change(e) {
       this.current = e.detail.current;
     },
     clickItem: function clickItem(e) {
       this.current1 = e;
     },
+    // 轮播图的预览和取消
     img_show: function img_show(index) {
       this.index = index + 1;
       // console.log(this.index);

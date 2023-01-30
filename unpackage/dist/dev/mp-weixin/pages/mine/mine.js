@@ -17,7 +17,7 @@ var components
 try {
   components = {
     uniBadge: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-badge/components/uni-badge/uni-badge */ "uni_modules/uni-badge/components/uni-badge/uni-badge").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-badge/components/uni-badge/uni-badge.vue */ 134))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-badge/components/uni-badge/uni-badge */ "uni_modules/uni-badge/components/uni-badge/uni-badge").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-badge/components/uni-badge/uni-badge.vue */ 135))
     },
   }
 } catch (e) {
@@ -74,7 +74,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -157,13 +157,12 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
-//
 var _default = {
   data: function data() {
     return {
+      // 登录状态
+      login_in: false,
+      // 1 为发布，2 为收藏
       current: 1,
       user_information_li: [{
         number: 12,
@@ -175,32 +174,73 @@ var _default = {
         number: 20,
         text: '获赞'
       }],
-      cultureTutor1: [{
-        img_src: '../../static/tabbar_img/find_on.png',
-        title: "作品名称"
-      }, {
-        img_src: '../../static/tabbar_img/find_on.png',
-        title: "作品名称"
-      }],
-      cultureTutor2: [{
-        img_src: '../../static/tabbar_img/find_on.png',
-        title: "作品名称"
-      }, {
-        img_src: '../../static/tabbar_img/find_on.png',
-        title: "作品名称"
-      }]
+      // 作品
+      userWorks: [],
+      // 用户信息
+      user_info: {
+        name: "昵称",
+        birthday: "0000-00-00",
+        gender: "1",
+        motto: "这个人很懒…",
+        fans_num: "0",
+        follow_num: "0",
+        favor_num: "0",
+        like_num: "0",
+        location: "湖北省武汉市",
+        register_time: "2023-01-17 09:58:58",
+        id: "0"
+      }
     };
   },
   methods: {
+    // 发布和收藏转换
     click_exhibition: function click_exhibition() {
       this.current = 1;
     },
     click_cultural: function click_cultural() {
       this.current = 2;
+    },
+    // 登录接口
+    login: function login() {
+      var _this = this;
+      wx.login({
+        // provider: 'weixin',
+        // onlyAuthorize: true,
+        success: function success(option) {
+          // console.log(option.code)
+          var code = option.code;
+          // debugger
+          _this.$api.login(code).then(function (res) {
+            // console.log(res)
+            if (res.code == 0) {
+              // console.log(res.data)
+              _this.login_in = true;
+              getApp().globalData.login = true;
+              _this.user_info = res.data;
+              uni.setStorageSync('user_info', res.data);
+              // let user_info1 = uni.getStorageSync('user_info');
+
+              // console.log(user_info1);
+              _this.$api.get_uesr_works(_this.user_info.id).then(function (res) {
+                // console.log(this.user_info.id);
+                // console.log(res);
+                if (res.code == 0) {
+                  _this.userWorks = res.data;
+                }
+              });
+            }
+          });
+        },
+        fail: function fail(err) {
+          console.log(err.errMsg);
+        }
+      });
+      // console.log("xxx")
     }
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
